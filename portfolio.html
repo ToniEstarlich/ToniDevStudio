@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Estarlich | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+    
+        .hero-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+    
+        .navbar {
+            margin-bottom: 40px;
+        }
+    
+        .social-icons i {
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+    
+        .progress-bar {
+            height: 30px;
+        }
+    
+    
+        .progress-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 20px;
+            /* adjust height as needed */
+            background-color: #007bff;
+            /* add background color for visibility */
+            color: white;
+            /* text color */
+        }
+    </style>
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Antonio Estarlich</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container">
+        <img src="images/yo.jpg" alt="Antonio Estarlich" class="rounded-circle mb-4" style="width: 355px; height: 355px;">
+        <h1 class="display-4">Antonio Estarlich</h1>
+        <p class="lead">Web Developer | AI Enthusiast | Problem Solver</p>
+        <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
+    </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="display-5 mb-3">About Me</h2>
+                <p>Hello! I'm Antonio Estarlich, a passionate web developer and aspiring AI specialist. With a Level 5 diploma in Web Development from Bristol College and a background in advanced software development, I am always seeking new challenges in both technology and innovation.</p>
+                <p>Currently, I am enhancing my skills in artificial intelligence, particularly interested in how machine learning can be integrated into web applications. I also enjoy exploring the connections between science, technology, and the mysteries of the universe. Feel free to browse my portfolio and get in touch!</p>
+            </div>
+            <div class="col-lg-6">
+               <!--<img src="images/yo.jpg" alt="Antonio" class="img-fluid rounded-circle"  style="width: 160px; height: 160px;">--> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5">My Portfolio</h2>
+        <div class="row">
+            
+            <!-- Project 1: Smile Clinic -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/smile-clinic.jpeg" class="card-img-top" alt="Smile Clinic" style="width: 415px; height: 220px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Smile Clinic</h5>
+                        <p class="card-text">A website for a dentist clinic, including appointment booking and service descriptions.</p>
+                        <a href="https://toniestarlich.github.io/Smile-Clinic.github.io/" class="btn btn-primary" target="_blank">Live Link</a>
+                        <a href="https://github.com/ToniEstarlich/Smile_Clinic" class="btn btn-secondary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Flavor Haven Burgers -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/flavon-haven-burguer.jpeg" class="card-img-top" alt="Flavor Haven Burgers" style="width: 415px; height: 220px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Flavor Haven Burgers</h5>
+                        <p class="card-text">A responsive website for a burger restaurant with a menu display and contact form.</p>
+                        <a href="https://toniestarlich.github.io/FlavorHavenBurgers.github.io/" class="btn btn-primary" target="_blank">Live Link</a>
+                        <a href="https://github.com/ToniEstarlich/FlavorHavenBurgers.github.io" class="btn btn-secondary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: The Global News -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/the-global-news.jpeg" class="card-img-top" alt="The Global News" style="width: 415px; height: 220px;" >
+                    <div class="card-body">
+                        <h5 class="card-title">The Global News</h5>
+                        <p class="card-text">A dynamic online news portal with categorized news articles. Built with HTML, CSS, JavaScript, JSON, and JEST testing.</p>
+                        <a href="https://toniestarlich.github.io/the-global-news.github.io-/" class="btn btn-primary" target="_blank">Live Link</a>
+                        <a href="https://github.com/ToniEstarlich/The-Global-News" class="btn btn-secondary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Book Planet (In Progress) -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/book-planet.jpeg" class="card-img-top" alt="Book Planet" style="width: 415px; height: 220px;" >
+                    <div class="card-body">
+                        <h5 class="card-title">Book Planet (In Progress)</h5>
+                        <p class="card-text">A book search and management app built with React. Currently in development, pending deployment.</p>
+                        <a href="https://github.com/ToniEstarlich/Book-Planet" class="btn btn-secondary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Nihongo Quest -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/nihongo.jpg" class="card-img-top" alt="Nihongo Quest" style="width: 415px; height: 220px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Nihongo Quest (In Progress)</h5>
+                        <p class="card-text">An interactive learning platform for Japanese language learners. Built with HTML, CSS, JavaScript, Flask, PostgreSQL, and Python.</p>
+                        <a href="https://github.com/ToniEstarlich/Nihongo-Quest" class="btn btn-secondary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Neural Odyssey -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/Neural_Odyssey_Logo.jpeg" class="card-img-top" alt="Neural Odyssey" style="width: 415px; height: 220px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Neural Odyssey (In Progress)</h5>
+                        <p class="card-text">AI-focused web application to explore machine learning fundamentals. Built with HTML, CSS, JavaScript, Flask, PostgreSQL, and Python.</p>
+                        <a href="https://github.com/ToniEstarlich/Neural-Odyssey" class="btn btn-secondary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5">Skills & Expertise</h2>
+        <div class="row">
+            <!-- Web Development -->
+            <div class="col-md-4">
+                <h5>Web Development</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                </div>
+                <p>Proficient in front-end and back-end technologies including HTML, CSS, JavaScript, and frameworks like React and Flask.</p>
+            </div>
+            <!-- AI & Machine Learning -->
+            <div class="col-md-4">
+                <h5>AI & Machine Learning (Learning)</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">20%</div>
+                </div>
+                <p>Currently enhancing my knowledge in AI and machine learning through courses and personal projects.</p>
+            </div>
+            <!-- Database Management -->
+            <div class="col-md-4">
+                <h5>Database Management</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+                <p>Experienced with SQL and NoSQL databases, including PostgreSQL, and proficient in database design and management.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Problem-Solving & Analytical Thinking -->
+            <div class="col-md-4">
+                <h5>Problem-Solving & Analytical Thinking</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                </div>
+                <p>Strong problem-solving abilities with an analytical approach to challenges, using logic and creativity to find effective solutions.</p>
+            </div>
+            <!-- Version Control & Collaboration -->
+            <div class="col-md-4">
+                <h5>Version Control & Collaboration</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">80%</div>
+                </div>
+                <p>Proficient in using Git and GitHub for version control, collaborating with teams, and managing code repositories in projects.</p>
+            </div>
+            <!-- Design Tools & Creativity -->
+            <div class="col-md-4">
+                <h5>Design Tools & Creativity</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                </div>
+                <p>Experienced with design tools like Photoshop, Illustrator, and Procreate, bringing a creative edge to web design and development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5">Get In Touch</h2>
+        <form action="#">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="col-md-12">
+                    <a href="mailto:toni.estarlich@me.com?subject=Contact%20Form&body=Name:%20Your%20Name%0AEmail:%20Your%20Email%0AMessage:%20Your%20Message"
+                        class="btn btn-primary btn-lg">
+                        Send Message
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 text-center">
+    <p>&copy; 2025 Antonio Estarlich. All rights reserved.</p>
+   
+
