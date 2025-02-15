@@ -1,11 +1,42 @@
 /* General Styles */
+/* Default Light Mode */
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    color: #333;
 }
 
+/* Dark Mode Styles */
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+/* Dark Navbar */
+body.dark .navbar {
+    background-color: #333;
+}
+
+/* Dark Card Background */
+body.dark .card {
+    background-color: #444;
+    color: white;
+}
+
+/* Dark Progress Bar */
+body.dark .progress-bar {
+    background-color: #0066cc;
+}
+
+/* Dark Button Colors */
+body.dark .btn-primary {
+    background-color: #007bff;
+}
+body.dark .btn-secondary {
+    background-color: #6c757d;
+}
 
 /* Adjust padding for smaller screens */
 @media (max-width: 768px) {
@@ -13,7 +44,6 @@ body {
         padding-top: 120px; /* Increase for mobile view */
     }
 }
-
 
 /* Navbar */
 .navbar {
@@ -87,3 +117,19 @@ body {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
+/* Apply dark background and light text for About and Skills sections in dark mode */
+body.bg-dark #about, body.bg-dark .skills {
+    background-color: #333; /* Dark grey background */
+    color: #fff; /* White text */
+  }
+  
+  /* You can also customize specific elements like text links inside these sections */
+  body.bg-dark .about a, body.bg-dark .skills a {
+    color: #ddd; /* Light color for links */
+  }
+  
+  body.bg-dark .about h2, body.bg-dark .skills h2 {
+    color: #fff; /* Make sure headings are white */
+  }
+  

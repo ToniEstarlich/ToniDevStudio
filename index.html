@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light"> <!-- Default theme is light -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 
 <body>
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Antonio Estarlich</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +24,19 @@
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                 <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <!-- Dark/Light Mode Toggle Button -->
+                <li class="nav-item">
+                    <button id="theme-toggle" class="btn btn-outline-secondary">
+                        <span id="theme-icon">🌙</span> <!-- Moon icon for dark mode -->
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<!-- Rest of  HTML content remains the same -->
+<!-- Hero Section, About Me, Portfolio, Skills, Contact, Footer, etc. -->
 
 <!-- Hero Section -->
 <section class="hero-section text-center" style="margin: 5%;">
@@ -41,7 +50,7 @@
 </section>
 
 <!-- About Me Section -->
-<section id="about" class="py-5 bg-light">
+<section id="about" class="py-5 bg-body-tertiary ">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -143,7 +152,7 @@
 
 
 <!-- Skills Section -->
-<section id="skills" class="py-5 bg-light">
+<section id="skills" class="py-5 bg-body-tertiary">
     <div class="container">
         <h2 class="display-5 text-center mb-5">Skills & Expertise</h2>
         <div class="row">
@@ -236,11 +245,9 @@
 <!--JavaScript files-->
 <script src="JS/main.js" defer></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+
 </body>
 </html>
-   
-
