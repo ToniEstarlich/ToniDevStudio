@@ -7,47 +7,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Raleway', sans-serif;
-        }
-    
-        .hero-section {
-            background: #f8f9fa;
-            padding: 60px 0;
-        }
-    
-        .navbar {
-            margin-bottom: 40px;
-        }
-    
-        .social-icons i {
-            font-size: 1.5em;
-            margin-right: 15px;
-        }
-    
-        .progress-bar {
-            height: 30px;
-        }
-    
-    
-        .progress-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 20px;
-            /* adjust height as needed */
-            background-color: #007bff;
-            /* add background color for visibility */
-            color: white;
-            /* text color */
-        }
-    </style>
-    </style>
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body>
 
+<body>
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
@@ -67,9 +30,10 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero-section text-center">
+<section class="hero-section text-center" style="margin: 5%;">
     <div class="container">
-        <img src="images/yo.jpg" alt="Antonio Estarlich" class="rounded-circle mb-4" style="width: 355px; height: 355px;">
+        <!-- Using Bootstrap's rounded-circle and img-fluid classes -->
+        <img src="images/yo.jpg" alt="Antonio Estarlich" class="rounded-circle img-fluid" style="width: 250px; height: 250px;">
         <h1 class="display-4">Antonio Estarlich</h1>
         <p class="lead">Web Developer | AI Enthusiast | Problem Solver</p>
         <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
@@ -101,7 +65,7 @@
             <!-- Project 1: Smile Clinic -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/smile-clinic.jpeg" class="card-img-top" alt="Smile Clinic" style="width: 415px; height: 220px;">
+                    <img src="images/smile-clinic.jpeg" class="card-img-top" alt="Smile Clinic">
                     <div class="card-body">
                         <h5 class="card-title">Smile Clinic</h5>
                         <p class="card-text">A website for a dentist clinic, including appointment booking and service descriptions.</p>
@@ -114,7 +78,7 @@
             <!-- Project 2: Flavor Haven Burgers -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/flavon-haven-burguer.jpeg" class="card-img-top" alt="Flavor Haven Burgers" style="width: 415px; height: 220px;">
+                    <img src="images/flavon-haven-burguer.jpeg" class="card-img-top" alt="Flavor Haven Burgers">
                     <div class="card-body">
                         <h5 class="card-title">Flavor Haven Burgers</h5>
                         <p class="card-text">A responsive website for a burger restaurant with a menu display and contact form.</p>
@@ -127,7 +91,7 @@
             <!-- Project 3: The Global News -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/the-global-news.jpeg" class="card-img-top" alt="The Global News" style="width: 415px; height: 220px;" >
+                    <img src="images/the-global-news.jpeg" class="card-img-top" alt="The Global News">
                     <div class="card-body">
                         <h5 class="card-title">The Global News</h5>
                         <p class="card-text">A dynamic online news portal with categorized news articles. Built with HTML, CSS, JavaScript, JSON, and JEST testing.</p>
@@ -140,7 +104,7 @@
             <!-- Project 4: Book Planet (In Progress) -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/book-planet.jpeg" class="card-img-top" alt="Book Planet" style="width: 415px; height: 220px;" >
+                    <img src="images/book-planet.jpeg" class="card-img-top" alt="Book Planet">
                     <div class="card-body">
                         <h5 class="card-title">Book Planet (In Progress)</h5>
                         <p class="card-text">A book search and management app built with React. Currently in development, pending deployment.</p>
@@ -152,7 +116,7 @@
             <!-- Project 5: Nihongo Quest -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/nihongo.jpg" class="card-img-top" alt="Nihongo Quest" style="width: 415px; height: 220px;">
+                    <img src="images/nihongo.jpg" class="card-img-top" alt="Nihongo Quest">
                     <div class="card-body">
                         <h5 class="card-title">Nihongo Quest (In Progress)</h5>
                         <p class="card-text">An interactive learning platform for Japanese language learners. Built with HTML, CSS, JavaScript, Flask, PostgreSQL, and Python.</p>
@@ -164,7 +128,7 @@
             <!-- Project 6: Neural Odyssey -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/Neural_Odyssey_Logo.jpeg" class="card-img-top" alt="Neural Odyssey" style="width: 415px; height: 220px;">
+                    <img src="images/Neural_Odyssey_Logo.jpeg" class="card-img-top" alt="Neural Odyssey">
                     <div class="card-body">
                         <h5 class="card-title">Neural Odyssey (In Progress)</h5>
                         <p class="card-text">AI-focused web application to explore machine learning fundamentals. Built with HTML, CSS, JavaScript, Flask, PostgreSQL, and Python.</p>
@@ -267,5 +231,16 @@
 <!-- Footer -->
 <footer class="bg-dark text-white py-4 text-center">
     <p>&copy; 2025 Antonio Estarlich. All rights reserved.</p>
+</footer>
+
+<!--JavaScript files-->
+<script src="JS/main.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
    
 
