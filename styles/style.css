@@ -118,18 +118,10 @@ body.dark .btn-secondary {
     transform: translateY(0) !important;
 }
 
-/* Apply dark background and light text for About and Skills sections in dark mode */
-body.bg-dark #about, body.bg-dark .skills {
-    background-color: #333; /* Dark grey background */
-    color: #fff; /* White text */
-  }
-  
-  /* You can also customize specific elements like text links inside these sections */
-  body.bg-dark .about a, body.bg-dark .skills a {
-    color: #ddd; /* Light color for links */
-  }
-  
-  body.bg-dark .about h2, body.bg-dark .skills h2 {
-    color: #fff; /* Make sure headings are white */
+/*hero responsive*/
+@media (max-width: 412px) {
+    .hero-section {
+      margin: 25%;
+    }
   }
   
