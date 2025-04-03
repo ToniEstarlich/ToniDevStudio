@@ -41,7 +41,8 @@ body.dark .btn-secondary {
 /* Adjust padding for smaller screens */
 @media (max-width: 768px) {
     .hero-section {
-        padding-top: 120px; /* Increase for mobile view */
+       /* padding-top: 140px;  Increase for mobile view */
+       margin-top: 6%;
     }
 }
 
@@ -124,12 +125,8 @@ body.dark .btn-secondary {
       margin: 25%;
     }
   }
-  
 
   /*------------------------------------------------------------------------------------- */
-
-
-
 
 /*
 <section>

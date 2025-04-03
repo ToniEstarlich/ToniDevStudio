@@ -39,6 +39,19 @@ i {
     0% {transform: translateX(0);}
     100% {transform: translatex(-1000%)}
   }
+
+  
+/*hero responsive*/
+@media (max-width: 360px) {
+    .rounded-circle {
+     margin-top: 48%;
+    }
+
+    i {
+        font-size: 320%;
+         margin-left: -3%;
+    }
+  }
 </style>
 
 
@@ -70,7 +83,7 @@ i {
 <!-- Hero Section, About Me, Portfolio, Skills, Contact, Footer, etc. -->
 
 <!-- Hero Section -->
-<section class="hero-section text-center" style="margin: 6%;">
+<div class="hero-section text-center" style=" margin: 6%;">
     <div class="container">
         <!-- Using Bootstrap's rounded-circle and img-fluid classes -->
         <img src="images/me.jpg" alt="Antonio Estarlich" class="rounded-circle img-fluid" style="width: 250px; height: 250px;">
@@ -78,7 +91,7 @@ i {
         <p class="lead">Web Developer | AI Enthusiast | Problem Solver</p>
         <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
     </div>
-</section>
+</div>
 
 <section>
     <div class="slider col-lg-12">
