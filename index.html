@@ -8,9 +8,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
+
+<style>
+    /* Styling for the logos */
+i {
+    width: 100px;
+    height: 100px;
+    animation: scroll 100s linear infinite;
+    font-size: 600%;
+    color: #c1c2c3;
+    margin-left: 1%;
+    text-shadow: 2px 2px 2pxpx white;
+  }
+  
+  .logo-container {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    overflow: hidden;
+    gap: 5em;
+  }
+  
+  
+  @keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
+  }
+</style>
+
+
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
     <div class="container-fluid">
@@ -39,13 +70,87 @@
 <!-- Hero Section, About Me, Portfolio, Skills, Contact, Footer, etc. -->
 
 <!-- Hero Section -->
-<section class="hero-section text-center" style="margin: 15%;">
+<section class="hero-section text-center" style="margin: 6%;">
     <div class="container">
         <!-- Using Bootstrap's rounded-circle and img-fluid classes -->
         <img src="images/me.jpg" alt="Antonio Estarlich" class="rounded-circle img-fluid" style="width: 250px; height: 250px;">
         <h1 class="display-4">Antonio Estarlich</h1>
         <p class="lead">Web Developer | AI Enthusiast | Problem Solver</p>
         <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
+    </div>
+</section>
+
+<section>
+    <div class="slider col-lg-12">
+        <!-- Scrolling Logos -->
+        
+            <div class="logo-container">
+                <!-- Technology logos -->
+                <i class="fab fa-react"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-python"></i>
+                <i class="fab fa-django"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-amazon"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fab fa-cuttlefish"></i>
+                <i class="fab fa-dotnet"></i>
+                <i class="fa-brands fa-phoenix-framework"></i>
+                
+                <i class="fab fa-react"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-python"></i>
+                <i class="fab fa-django"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-amazon"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fab fa-cuttlefish"></i>
+                <i class="fab fa-dotnet"></i>
+                <i class="fa-brands fa-phoenix-framework"></i>
+
+                <i class="fab fa-react"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-python"></i>
+                <i class="fab fa-django"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-amazon"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fab fa-cuttlefish"></i>
+                <i class="fab fa-dotnet"></i>
+                <i class="fa-brands fa-phoenix-framework"></i>
+
+                <i class="fab fa-react"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-python"></i>
+                <i class="fab fa-django"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-amazon"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fab fa-cuttlefish"></i>
+                <i class="fab fa-dotnet"></i>
+                <i class="fa-brands fa-phoenix-framework"></i>
+            </div>
+        
     </div>
 </section>
 
