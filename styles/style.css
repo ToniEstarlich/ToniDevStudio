@@ -1,41 +1,10 @@
 /* General Styles */
-/* Default Light Mode */
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     color: #333;
-}
-
-/* Dark Mode Styles */
-body.dark {
-    background-color: #121212;
-    color: white;
-}
-
-/* Dark Navbar */
-body.dark .navbar {
-    background-color: #333;
-}
-
-/* Dark Card Background */
-body.dark .card {
-    background-color: #444;
-    color: white;
-}
-
-/* Dark Progress Bar */
-body.dark .progress-bar {
-    background-color: #0066cc;
-}
-
-/* Dark Button Colors */
-body.dark .btn-primary {
-    background-color: #007bff;
-}
-body.dark .btn-secondary {
-    background-color: #6c757d;
 }
 
 /* Navbar */
@@ -46,7 +15,7 @@ body.dark .btn-secondary {
     width: 100%;
     background-color: #333;
     color: white;
-    z-index: 1000; /* Ensures navbar is on top of other elements */
+    z-index: 1000;
     padding: 10px 0;
 }
 
@@ -111,29 +80,133 @@ body.dark .btn-secondary {
     transform: translateY(0) !important;
 }
 
-  /*------------------------------------------------------------------------------------- */
+/* Hero Section */
+.hero-section {
+    margin-top: 5%;
+}
 
-/*
-<section>
-    <div class="slider col-lg-12">
-        <!-- Scrolling Logos -->
-        
-            <div class="logo-container">
-                <!-- Technology logos -->
-                <i class="fab fa-react"></i>
-                <i class="fab fa-js"></i>
-                <i class="fab fa-python"></i>
-                <i class="fab fa-django"></i>
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3"></i>
-                <i class="fab fa-github"></i>
-                <i class="fab fa-git"></i>
-                <i class="fab fa-amazon"></i>
-                <i class="fab fa-cuttlefish"></i>
-                <i class="fab fa-dotnet"></i>
-                <i class="fab fa-postgresql"></i>
-            </div>
-        
-    </div>
-</section>
-*/
+/* Styling for the logos */
+i {
+    font-size: 500%;
+}
+
+.logo-container {
+    display: flex;
+    gap: 7em;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider .logo-container {
+    animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 412px) {
+    i {
+        font-size: 300%;
+        margin-left: 0;
+    }
+
+    .logo-container {
+        gap: 2em;
+    }
+
+    .hero-section {
+        margin-top: 40%;
+    }
+}
+
+/* Service Section */
+.services-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    flex: 1 0 30%;
+    margin: 10px;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.service-icon:hover {
+    color: #0056b3;
+}
+
+.service-item h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .services-row {
+        justify-content: center;
+    }
+
+    .service-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
