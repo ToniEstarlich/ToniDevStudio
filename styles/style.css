@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: #333;
+    color: #7a7979;
 }
 
 /* Navbar */
@@ -24,6 +24,10 @@ body {
     font-size: 1.5em;
     margin-right: 15px;
     transition: transform 0.3s ease;
+}
+
+.slider {
+    color: #d9d9d9;
 }
 
 .social-icons i:hover {
@@ -131,7 +135,6 @@ i {
 
 /* Service Section */
 .services-section {
-    background-color: #f8f9fa;
     padding: 60px 0;
     text-align: center;
 }
@@ -209,4 +212,10 @@ i {
         max-width: 100%;
         margin-bottom: 20px;
     }
+}
+
+/* Footer */
+
+footer {
+    background-color: #777;
 }
