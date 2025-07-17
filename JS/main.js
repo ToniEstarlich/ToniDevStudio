@@ -27,3 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     elements.forEach(el => observer.observe(el));
 });
+
+// About Espanish
+
+document.getElementById("toggle-es").addEventListener("click", function () {
+    const esContent = document.querySelector(".about-es");
+    esContent.style.display = esContent.style.display === "none" ? "block" : "none";
+  });
+

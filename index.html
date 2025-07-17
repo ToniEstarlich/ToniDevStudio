@@ -137,46 +137,78 @@
 
 <!-- About Me Section -->
 <section id="about" class="py-5 bg-body-tertiary">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <h2 class="display-5 mb-3">About Me / Sobre mí</h2>
-  
+
+  <div class="text-end pe-3">
+    <button id="toggle-es" class="btn btn-light btn-sm">
+      <img src="https://flagcdn.com/es.svg" alt="Español" width="20" />
+      Español
+    </button>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="display-5 mb-3">About Me / Sobre mí</h2>
+
+        <p>
+          <strong>Need a modern, responsive website or web app?</strong> I’m Antonio Estarlich, a <strong>junior full-stack web developer</strong> based in the UK. I design and build clean, mobile-first, accessible web solutions for individuals, startups, and small businesses.
+        </p>
+
+        <p>
+          My technical stack includes <strong>HTML, CSS, JavaScript, Python, Flask, Django, PostgreSQL</strong>, and <strong>version control with Git & GitHub</strong>. I develop both front-end user interfaces and back-end RESTful APIs with structured databases. I'm also familiar with <strong>Bootstrap, Jinja, JSON, and testing frameworks like JEST</strong>.
+        </p>
+
+        <p>
+          I hold diplomas in <em>Web Development</em> and <em>Advanced Software Development</em>, earned through Amazon UK's Career Choice programme over two years. I’m currently completing a <strong>Level 5 Diploma in Web Development</strong> at Bristol College, which is equivalent to the first two years of a UK university degree. My plan is to continue with a Level 6 or BSc in AI or Computer Science.
+        </p>
+
+        <p>
+          My portfolio includes real-world projects such as a dental clinic site, a dynamic news portal, an e-commerce store for digital art, and a Japanese learning app. These showcase my skills in authentication, CRUD operations, responsive design, database integration, and front-end interactivity.
+        </p>
+
+        <p>
+          I’m actively seeking a junior developer role where I can contribute to a collaborative team, grow professionally, and help deliver web solutions that make a real impact. I’m detail-oriented, reliable, and passionate about building useful and user-friendly applications.
+        </p>
+
+        <p><strong>Let’s build something great!</strong></p>
+
+        <hr>
+
+        <!-- Spanish version (initially hidden) -->
+        <div class="about-es" style="display: none;">
           <p>
-            <strong>Need a modern, responsive website?</strong> I’m Antonio Estarlich, a <strong>freelance front-end web developer</strong> based in the UK, offering <strong>professional websites</strong> for individuals, small businesses, and startups — in both English and Spanish.
+            <strong>¿Necesitas una página web o aplicación moderna y profesional?</strong> Soy Antonio Estarlich, <strong>desarrollador web full-stack junior</strong> afincado en el Reino Unido. Diseño y desarrollo soluciones web limpias, accesibles y adaptadas a móviles, pensadas para particulares, pequeñas empresas y startups.
           </p>
-  
+
           <p>
-            I specialize in <strong>HTML, CSS, and JavaScript</strong> to create clean, user-friendly websites that look great on all devices. I’ve completed diplomas in <em>Web Development</em> and <em>Advanced Software Development</em> through <strong>Amazon’s Career</strong> program and am currently finishing a Level 5 Diploma in Web Development at Bristol College.
+            Mi stack incluye <strong>HTML, CSS, JavaScript, Python, Flask, Django y PostgreSQL</strong>, junto con control de versiones con <strong>Git y GitHub</strong>. Desarrollo tanto interfaces de usuario como APIs REST y sistemas backend con bases de datos estructuradas. También trabajo con <strong>Bootstrap, Jinja, JSON y herramientas de testing como JEST</strong>.
           </p>
-  
+
           <p>
-            Whether you need a personal portfolio, a landing page, or a full business website — I can help bring your vision to life. I work efficiently, communicate clearly, and focus on delivering results.
+            Cuento con diplomas en <em>Desarrollo Web</em> y <em>Desarrollo de Software Avanzado</em>, obtenidos tras dos años de formación con el programa Career Choice de Amazon UK. Actualmente finalizo un <strong>Diploma de Nivel 5 en Desarrollo Web</strong> en Bristol College, equivalente a dos años universitarios en Reino Unido. Mi objetivo es continuar con un Nivel 6 o una carrera en Ciencias de la Computación o Inteligencia Artificial.
           </p>
-  
-          <hr>
-  
+
           <p>
-            <strong>¿Necesitas una página web moderna y profesional?</strong> Soy Antonio Estarlich, <strong>desarrollador web front-end freelance</strong>. Ofrezco sitios web para emprendedores, negocios locales y proyectos personales — en inglés y en español.
+            En mi portafolio presento proyectos reales como una clínica dental, un portal de noticias, una tienda digital de arte y una plataforma interactiva para aprender japonés. En ellos aplico funciones de autenticación, operaciones CRUD, diseño responsive, integración de bases de datos y una experiencia de usuario fluida.
           </p>
-  
+
           <p>
-            Trabajo con <strong>HTML, CSS y JavaScript</strong> para desarrollar páginas web atractivas, adaptables a móviles y optimizadas para buscadores. Me formé a través del programa <strong>Amazon’s Career</strong> con diplomas en Desarrollo Web y Software Avanzado, y actualmente finalizo un diploma de nivel 5 en Bristol College.
+            Busco una oportunidad como desarrollador junior en un equipo profesional donde seguir creciendo, aportar ideas y construir soluciones útiles. Soy organizado, detallista y comprometido con la calidad del código y la experiencia del usuario.
           </p>
-  
-          <p>
-            Si buscas una web eficaz, estética y entregada a tiempo, estás en el lugar adecuado.
-          </p>
-  
-          <p><strong>Let’s build something great! / ¡Construyamos algo genial!</strong></p>
-        </div>
-        <div class="col-lg-6 text-center">
-          <!-- Optional image -->
-          <!-- <img src="images/yo.jpg" alt="Antonio Estarlich" class="img-fluid rounded-circle" style="width: 180px; height: 180px;"> -->
+
+          <p><strong>¡Construyamos algo genial!</strong></p>
         </div>
       </div>
+
+      <div class="col-lg-6 text-center">
+        <!-- Optional image -->
+        <!-- <img src="images/yo.jpg" alt="Antonio Estarlich" class="img-fluid rounded-circle" style="width: 180px; height: 180px;"> -->
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
   
 
 <!-- Portfolio Section --> 
@@ -208,7 +240,7 @@
         <div class="card">
           <div class="video-container">
             <video autoplay playsinline muted loop preload="metadata">
-              <source src="videos/burguer_restaurant.mp4" type="video/mp4">
+              <source src="videos/burguer.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -244,7 +276,7 @@
         <div class="card">
           <div class="video-container">
             <video autoplay playsinline muted loop preload="metadata">
-              <source src="videos/book_planet.mp4" type="video/mp4">
+              <source src="videos/planet_book.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -279,7 +311,7 @@
         <div class="card">
           <div class="video-container">
             <video autoplay playsinline muted loop preload="metadata">
-              <source src="videos/pixel_store.mp4" type="video/mp4">
+              <source src="videos/pixel.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
