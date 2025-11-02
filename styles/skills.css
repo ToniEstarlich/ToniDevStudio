@@ -3,7 +3,7 @@
     h2 {
       font-size: 2.8rem;
       font-weight: bold;
-      color: #1a202c;
+      color: #6b6b6b;
       margin-bottom: 10px;
     }
 
@@ -21,7 +21,7 @@
     }
 
     .skill-card {
-      background: white;
+      background: rgb(42, 40, 46);
       padding: 25px;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -37,12 +37,12 @@
 
     .skill-card h3 {
       font-size: 1.2rem;
-      color: #4c51bf;
+      color: #6f6f6f;
       margin-bottom: 10px;
     }
 
     .skill-card p {
-      color: #2d3748;
+      color: #5f6060;
       line-height: 1.5;
     }
 

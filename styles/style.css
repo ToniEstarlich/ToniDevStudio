@@ -3,7 +3,7 @@ body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #27252b;
     color: #7a7979;
 }
 /* Navbar */
@@ -28,10 +28,21 @@ body {
     font-size: 1.5em;
     margin-right: 15px;
     transition: transform 0.3s ease;
+    color: #e2f743;
 }
 
 .slider {
     color: #d9d9d9;
+}
+
+.btn {
+  background-color: #41423d;
+  color: #808080;
+}
+
+.btn:hover {
+  background-color: #e2f743;
+  color: rgb(59, 59, 59);
 }
 
 .social-icons i:hover {
@@ -45,8 +56,8 @@ body {
     align-items: center;
     text-align: center;
     height: 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: #e2f743;
+    color: rgb(51, 51, 51);
 }
 
 /* Portfolio Cards */
@@ -54,7 +65,7 @@ body {
     width: 100%;
     max-width: 415px;
     margin: 20px auto;
-    background: white;
+    background: rgb(42, 40, 46);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(30px);
@@ -164,7 +175,7 @@ i {
 .services-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #5c5c5c;
+    color: #323232;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -184,7 +195,7 @@ i {
 }
 
 .service-item {
-    background-color: #fff;
+    background-color: #333333;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -200,13 +211,13 @@ i {
 
 .service-icon {
     font-size: 3rem;
-    color: #007bff;
+    color: #41423d;
     margin-bottom: 20px;
     transition: color 0.3s ease;
 }
 
 .service-icon:hover {
-    color: #0056b3;
+    color: #edfd3a;
 }
 
 .service-item h5 {
@@ -396,7 +407,7 @@ i {
 /* Footer */
 
 footer {
-    background-color: #777;
+    background-color: #2a2833;
 }
 
 /* Cookies */
@@ -411,7 +422,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  color: #5349d9;
+  color: #666666;
   padding: 15px;
   text-align: center;
   z-index: 1;
