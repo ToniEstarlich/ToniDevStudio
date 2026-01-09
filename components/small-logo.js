@@ -9,7 +9,7 @@
       containerId: 'logo-container', // container div
       text: ['D','E','V','L','A','B'], // letters
       fontSize: '15px', // adjust for navbar
-      color: '#000',
+      color: '#a7a7a7ff',
       waveDuration: 600, // ms between letters animation
       url: 'https://toniestarlich.github.io/dev-live/dev_lab/templates/intro.html', // link on click
       target: '_blank' // open in new tab

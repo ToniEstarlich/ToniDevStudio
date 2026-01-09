@@ -105,9 +105,9 @@
   flex-direction: column;
   gap: 4px;
 }
-#devlab-ad-root .title { font-size: 15px; font-weight: 700; color: #494949ff; }
-#devlab-ad-root .tag { font-size: 12px; color: #444444ff; opacity: .95; }
-#devlab-ad-root .sub { font-size: 11px; color: #5a5959ff; opacity: .85; }
+#devlab-ad-root .title { font-size: 15px; font-weight: 700; color: #adadadff; }
+#devlab-ad-root .tag { font-size: 12px; color: #7a7a7aff; opacity: .95; }
+#devlab-ad-root .sub { font-size: 11px; color: #9b9b9bff; opacity: .85; }
 #devlab-ad-root .cta-row { display: flex; gap: 8px; align-items: center; margin-top: 6px; }
 #devlab-ad-root .cta {
   background: transparent;
@@ -115,7 +115,7 @@
   padding: 6px 8px;
   border-radius: 8px;
   font-size: 12px;
-  color: #5a5a5aff;
+  color: #999999ff;
   text-decoration: none;
   display: inline-block;
 }
