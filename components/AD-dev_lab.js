@@ -161,7 +161,7 @@
   <span class="ring"></span>
 </div>
 <div class="content">
-  <strong style="color:rgba(208, 255, 65, 1); font-size: 80%; margin-bottom: 5px;">Now:</strong>
+  <strong style="color:rgb(243, 255, 19); font-size: 80%; margin-bottom: 5px;">Now:</strong>
   <div class="title">${escapeHtml(opts.title)}</div>
   <div class="tag">${escapeHtml(opts.subtitle)}</div>
   <div class="sub">${escapeHtml(opts.description)}</div>

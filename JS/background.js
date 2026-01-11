@@ -34,7 +34,7 @@ window.addEventListener('resize', () => {
 // Animación
 function animate() {
   // Fondo negro normal (sin trails exagerados)
-  ctx.fillStyle = '#0a0a0a';
+  ctx.fillStyle = '#27252b';
   ctx.fillRect(0, 0, width, height);
 
   // Dibujar partículas
@@ -48,7 +48,7 @@ function animate() {
 
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-    ctx.fillStyle = '#FFD700'; // amarillo
+    ctx.fillStyle = '#646464'; // amarillo '#FFD700'
     ctx.fill();
     ctx.closePath();
   }
@@ -81,7 +81,7 @@ function animate() {
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(mouse.x, mouse.y);
-        ctx.strokeStyle = `rgba(255,255,200,0.2)`; 
+        ctx.strokeStyle = `rgba(255, 255, 13, 0.2)`; 
         ctx.lineWidth = 0.8;
         ctx.stroke();
         ctx.closePath();

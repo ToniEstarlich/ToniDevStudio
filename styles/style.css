@@ -32,7 +32,7 @@ body {
 
 .navbar a:hover,
 .navbar .nav-link:hover {
-    color: #e2f743 !important;
+    color:  #FFD700 !important;
 }
 
 /* Social Icons */
@@ -40,7 +40,7 @@ body {
     font-size: 1.5em;
     margin-right: 15px;
     transition: transform 0.3s ease;
-    color: #e2f743;
+    color:  #FFD700 ;
 }
 
 .slider {
@@ -53,7 +53,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #e2f743;
+  background-color: #FFD700;
   color: rgb(59, 59, 59);
 }
 
@@ -68,7 +68,7 @@ body {
     align-items: center;
     text-align: center;
     height: 20px;
-    background-color: #e2f743;
+    background-color: #FFD700;
     color: rgb(51, 51, 51);
 }
 
@@ -229,7 +229,7 @@ i {
 }
 
 .service-icon:hover {
-    color: #edfd3a;
+    color: #FFD700;
 }
 
 .service-item h5 {

@@ -27,7 +27,7 @@ html, body {
   display: block;
 }
 
-main, section, nav, footer, div,  {
+main, section, nav, footer, div {
   position: relative;
   z-index: 1; /* todo el contenido encima del canvas */
 }
