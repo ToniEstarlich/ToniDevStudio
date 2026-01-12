@@ -50,6 +50,7 @@
   background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
   animation: slideIn 900ms cubic-bezier(.22,.9,.36,1) forwards, float 4s ease-in-out 900ms infinite;
   text-decoration: none;
+  z-index: 1;
 }
 @keyframes slideIn {
   from { opacity: 0; transform: translateY(18px) scale(.98); }
@@ -161,7 +162,7 @@
   <span class="ring"></span>
 </div>
 <div class="content">
-  <strong style="color:rgb(243, 255, 19); font-size: 80%; margin-bottom: 5px;">Now:</strong>
+  <strong style="color:rgb(255, 244, 30); font-size: 80%; margin-bottom: 5px;">Now:</strong>
   <div class="title">${escapeHtml(opts.title)}</div>
   <div class="tag">${escapeHtml(opts.subtitle)}</div>
   <div class="sub">${escapeHtml(opts.description)}</div>
