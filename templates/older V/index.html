@@ -48,7 +48,6 @@
     <link rel="stylesheet" href="styles/slide.css">
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/background.css">
-    <link rel="stylesheet" href="styles/header.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -101,9 +100,9 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#intro-section">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="templates/contact.html">Contact</a></li>
             </ul>
         </div>
@@ -113,48 +112,88 @@
 <!-- Rest of  HTML content remains the same -->
 <!-- Hero Section, About Me, Portfolio, Skills, Contact, Footer, etc. -->
 
-<!-- Intro Section: Hero + About -->
-<section class="intro-section py-5" id="intro-section">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- Left: Image + Title -->
-      <div class="col-lg-5 text-center mb-4 mb-lg-0">
-        <img src="images/me.jpg" alt="Antonio Estarlich"
-             class="rounded-circle img-fluid mb-3"
-             style="width: 220px; height: 220px;">
-        <h1 class="display-5 mb-2">Antonio Estarlich</h1>
-        <p class="lead mb-3">
-          Software & Web Developer<br>
-          Python • Flask • Django • React • Databases
-        </p>
+<!-- Hero Section -->
+<div class="hero-section text-center">
+    <div class="container">
+        <!-- Using Bootstrap's rounded-circle and img-fluid classes -->
+        <img src="images/me.jpg" alt="Antonio Estarlich" class="rounded-circle img-fluid" style="width: 250px; height: 250px;">
+        <h1 class="display-4">Antonio Estarlich</h1>
+        <p class="lead">Full-Stack Developer | Python (Flask & Django) | React | APIs | Database & AI Enthusiast</p>
         <a href="#portfolio" class="btn btn-lg">View My Work</a>
-      </div>
-
-      <!-- Right: About -->
-      <div class="col-lg-7">
-        <h2 class="mb-3">About Me</h2>
-
-        <p>
-          I build real-world web applications with a strong focus on backend logic,
-          clean architecture, and practical problem-solving.
-          My work spans full-stack systems including APIs, databases, and modern front-end interfaces.
-        </p>
-
-        <p>
-          Over the past years, I’ve developed and deployed projects such as interactive learning platforms,
-          e-commerce-style applications, and dynamic content-driven websites.
-          These projects demonstrate my ability to design, build, and maintain complete software systems.
-        </p>
-
-        <p>
-          I’m currently expanding toward AI-driven applications and 3D interactive experiences,
-          building on a solid foundation in software and web engineering.
-        </p>
-      </div>
-
     </div>
-  </div>
+</div>
+
+<section>
+    <div class="slider col-lg-12">
+        <!-- Scrolling Logos -->
+            <div class="logo-container">
+                <!-- Technology logos -->
+                <i class="fab fa-react"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-python"></i>
+                <i class="fab fa-django"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-amazon"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fab fa-cuttlefish"></i>
+                <i class="fab fa-dotnet"></i>
+                <i class="fa-brands fa-phoenix-framework"></i>
+                <i class="fab fa-react"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-python"></i>
+                <i class="fab fa-django"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-git"></i>
+                <i class="fab fa-amazon"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fab fa-cuttlefish"></i>
+                <i class="fab fa-dotnet"></i>
+                <i class="fa-brands fa-phoenix-framework"></i>
+            </div>
+        </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="py-5">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="display-5 mb-3">About Me</h2>
+  
+        <p>
+          Hi, I’m Antonio Estarlich, a Full-Stack Developer with hands-on experience building real-world web applications
+          using Python, Django, JavaScript, and C#.
+          I have spent the last three years strengthening my skills in full-stack development, creating projects that
+          demonstrate responsive design, database integration, and functional web systems.
+        </p>
+  
+        <p>
+          I’m now expanding my focus toward AI-driven applications and 3D interactive experiences. While I am actively
+          learning these areas, my goal is to leverage my web and software foundation to build intelligent, immersive
+          applications in the near future.
+        </p>
+  
+        <p>
+          My portfolio showcases projects like e-commerce platforms, interactive learning apps, and news portals. These
+          demonstrate my ability to develop complete systems, from front-end interactivity to back-end architecture and
+          deployment.
+        </p>
+  
+        <p>
+          I’m looking for opportunities to grow as a developer, contribute to innovative projects, and continue my journey
+          toward AI and 3D development.
+        </p>
+  
 </section>
 
 <!-- Portfolio Section --> 
@@ -276,6 +315,169 @@
     </div>
   </div>
 </section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="py-5 ">
+<div class="container">
+        <h2 class="display-5 text-center mb-5">Skills & Expertise</h2>
+
+<!--CRUD, API,fetch  -->
+
+    <div class="content">
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>CRUD Functionality</h3>
+                <p>The foundation of any modern app — user management, content, products, and more.</p>
+            </div>
+            <div class="skill-card">
+                <h3>RESTful API</h3>
+                <p>Modern frontends interact with the backend using clean, RESTful endpoints.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Fetch / HTTP Requests</h3>
+                <p>I can make frontends "talk" to APIs — fetching, displaying, and updating real-time data.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Flask / Django + Database</h3>
+                <p>Powerful backends written in Python, fully integrated with relational databases.</p>
+            </div>
+            <div class="skill-card">
+                <h3>PostgreSQL</h3>
+                <p>An industry-grade relational database used by top tech companies worldwide.</p>
+            </div>
+            <div class="skill-card">
+                <h3> Deployment + Integration</h3>
+                <p>
+                    I deploy backends with <strong>Render</strong> and <strong>Heroku</strong>, exposing live RESTful
+                    APIs.
+                    My frontend projects, hosted on <strong>GitHub Pages</strong>, use <code>fetch()</code> to
+                    communicate with those APIs — simulating real-world full-stack environments.
+                </p>
+            </div>
+        </div>
+
+
+
+    
+        <div class="row">
+            <!-- Web Development -->
+            <div class="col-md-4">
+                <h5>Web Development</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                </div>
+                <p>Proficient in front-end and back-end technologies including HTML, CSS, JavaScript, and frameworks like React and Flask.</p>
+            </div>
+            <!-- AI & Machine Learning -->
+            <div class="col-md-4">
+                <h5>AI & Machine Learning (Learning)</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">20%</div>
+                </div>
+                <p>Currently enhancing my knowledge in AI and machine learning through courses and personal projects.</p>
+            </div>
+            <!-- Database Management -->
+            <div class="col-md-4">
+                <h5>Database Management</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+                <p>Experienced with SQL and NoSQL databases, including PostgreSQL, and proficient in database design and management.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Problem-Solving & Analytical Thinking -->
+            <div class="col-md-4">
+                <h5>Problem-Solving & Analytical Thinking</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                </div>
+                <p>Strong problem-solving abilities with an analytical approach to challenges, using logic and creativity to find effective solutions.</p>
+            </div>
+            <!-- Version Control & Collaboration -->
+            <div class="col-md-4">
+                <h5>Version Control & Collaboration</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">80%</div>
+                </div>
+                <p>Proficient in using Git and GitHub for version control, collaborating with teams, and managing code repositories in projects.</p>
+            </div>
+            <!-- Design Tools & Creativity -->
+            <div class="col-md-4">
+                <h5>Design Tools & Creativity</h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                </div>
+                <p>Experienced with design tools like Photoshop, Illustrator, and Procreate, bringing a creative edge to web design and development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What I Offer Section -->
+<section id="services" class="services-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">What I Offer</h2>
+  
+      <div class="row g-4">
+        <!-- Responsive Web Design -->
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <i class="fas fa-laptop-code service-icon mb-3"></i>
+            <h5 class="service-h5">Responsive Web Design</h5>
+            <p>I build modern, mobile-friendly websites using HTML5, CSS3, and JavaScript — optimized for all screen sizes and browsers.</p>
+          </div>
+        </div>
+  
+        <!-- Custom Front-End Development -->
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <i class="fas fa-code service-icon mb-3"></i>
+            <h5 class="service-h5" >Custom Front-End Development</h5>
+            <p>I develop fully customized websites and user interfaces with clean code, animations, interactivity, and optimized performance.</p>
+          </div>
+        </div>
+  
+        <!-- Landing Pages & Portfolios -->
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <i class="fas fa-rocket service-icon mb-3"></i>
+            <h5 class="service-h5" >Landing Pages & Portfolio Sites</h5>
+            <p>I create professional landing pages and personal portfolios for creatives, freelancers, and small businesses — fast, stylish, and SEO-friendly.</p>
+          </div>
+        </div>
+  
+        <!-- Website Updates & Redesign -->
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <i class="fas fa-sync-alt service-icon mb-3"></i>
+            <h5 class="service-h5">Website Updates & Redesign</h5>
+            <p>Need to refresh your website? I offer redesigns, layout updates, and improvements in responsiveness, accessibility, and loading speed.</p>
+          </div>
+        </div>
+  
+        <!-- Front-End Optimization -->
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <i class="fas fa-chart-line service-icon mb-3"></i>
+            <h5 class="service-h5">Front-End Optimization</h5>
+            <p>I optimize existing websites for better performance, clean structure, SEO, and user experience using best practices in front-end development.</p>
+          </div>
+        </div>
+  
+        <!-- Support & Maintenance -->
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <i class="fas fa-tools service-icon mb-3"></i>
+            <h5 class="service-h5">Ongoing Support & Maintenance</h5>
+            <p>I offer monthly website maintenance and support to ensure your site stays fast, secure, and up-to-date.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
 <!-- Contact Section -->
 <section id="contact" class="py-5">

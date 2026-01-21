@@ -1,12 +1,4 @@
-/* General Styles 
-body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #27252b;
-    color: #7a7979;
-}*/
-/* Navbar */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -261,7 +253,6 @@ i {
 
 /* Link Dev live */
 /* LIVE logo */
-
 
  .text-live {
     text-decoration: none;
