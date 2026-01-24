@@ -4,7 +4,9 @@
 
 //use the size attribute to set the size: "navbar", "small", "medium", "large"
 
-// SIZE CONFIG (FUERA de la clase)
+// <toni-logo size="medium"></toni-logo>
+// <script src="components/toni-logo.js" defer></script>
+
 const SIZES = {
   navbar: { base: 60, circle: 12, radius: 22, font: 0 },
   small:  { base: 120, circle: 24, radius: 42, font: 18 },
@@ -37,14 +39,17 @@ class ToniLogo extends HTMLElement {
           display: inline-flex;
           flex-direction: column;
           align-items: center;
-          margin: 1px;
         }
 
         .logo-circle {
           position: relative;
           width: ${base}px;
           height: ${base}px;
-          animation: spin 52s linear infinite;
+          opacity: 0;
+          transform: scale(0.6);
+          animation: zoomIn 1s ease-out forwards,
+                     spin 52s linear infinite;
+          animation-delay: 0s, 1.2s;
         }
 
         .circle {
@@ -52,9 +57,12 @@ class ToniLogo extends HTMLElement {
           width: ${circle}px;
           height: ${circle}px;
           border-radius: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 0;
           box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-          animation: pulse 2.5s ease-in-out infinite;
+          animation:
+            pointIn 0.5s ease-out forwards,
+            pulse 2.5s ease-in-out infinite;
         }
 
         .name {
@@ -63,21 +71,18 @@ class ToniLogo extends HTMLElement {
           letter-spacing: 2px;
           font-family: system-ui, -apple-system, BlinkMacSystemFont;
           font-size: ${font}px;
+          opacity: 0;
+          animation: fadeIn 0.8s ease forwards;
+          animation-delay: 1.2s;
         }
 
-       /* Tablet */
-       @media (max-width: 992px) {
-       .name {
-           font-size: calc(${font}px * 0.8); /* reduce un 20% en tablet */
-         }
+        @media (max-width: 992px) {
+          .name { font-size: calc(${font}px * 0.8); }
         }
 
-        /* Mobile */
-       @media (max-width: 576px) {
-       .name {
-        font-size: calc(${font}px * 0.6); /* reduce un 40% en móvil */
+        @media (max-width: 576px) {
+          .name { font-size: calc(${font}px * 0.6); }
         }
-     }
 
         .c1 { background-color: #FF0000; }
         .c2 { background-color: #FF7F00; }
@@ -85,6 +90,20 @@ class ToniLogo extends HTMLElement {
         .c4 { background-color: #55ff00; }
         .c5 { background-color: #0000FF; }
         .c6 { background-color: #bf00ff; }
+
+        @keyframes zoomIn {
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        @keyframes pointIn {
+          to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
 
         @keyframes spin {
           from { transform: rotate(0deg); }
@@ -95,6 +114,10 @@ class ToniLogo extends HTMLElement {
           0%   { transform: translate(-50%, -50%) scale(1); }
           50%  { transform: translate(-50%, -50%) scale(1.2); }
           100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        @keyframes fadeIn {
+          to { opacity: 1; }
         }
 
         .logo-circle:hover {
@@ -124,7 +147,7 @@ class ToniLogo extends HTMLElement {
       const angle = (i / circles.length) * Math.PI * 2;
       circle.style.left = center + radius * Math.cos(angle) + "px";
       circle.style.top  = center + radius * Math.sin(angle) + "px";
-      circle.style.animationDelay = `${i * 0.25}s`;
+      circle.style.animationDelay = `${0.4 + i * 0.15}s`;
     });
   }
 }
