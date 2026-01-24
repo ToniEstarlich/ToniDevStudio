@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Cromático Circular</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #494949;
+}
+
+/* LOGO */
+.logo-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  animation: spin 52s linear infinite;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* Texto */
+.name {
+  margin-top: 0px;
+  color: thistle;
+  letter-spacing: 2px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  font-size: 34px;
+}
+
+/* Colores cromáticos */
+.c1 { background-color: #FF0000; }
+.c2 { background-color: #FF7F00; }
+.c3 { background-color: #FFFF00; }
+.c4 { background-color: #55ff00; }
+.c5 { background-color: #0000FF; }
+.c6 { background-color: #bf00ff; }
+
+/* Animaciones */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.2); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.logo-circle:hover {
+  animation-play-state: paused;
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo-circle">
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+  <div class="circle c4"></div>
+  <div class="circle c5"></div>
+  <div class="circle c6"></div>
+</div>
+
+<p class="name">ANTONIO <strong>ESTARLICH</strong></p>
+
+<script>
+const circles = document.querySelectorAll('.circle');
+const centerX = 100;
+const centerY = 100;
+const radius = 60;
+
+circles.forEach((circle, i) => {
+  const angle = (i / circles.length) * (2 * Math.PI);
+  circle.style.left = centerX + radius * Math.cos(angle) + 'px';
+  circle.style.top  = centerY + radius * Math.sin(angle) + 'px';
+  circle.style.animationDelay = `${i * 0.25}s`;
+});
+</script>
+
+</body>
+</html>

@@ -1,3 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+   min-height: 100vh;     
+}
+
+.logo {
+  margin-top: 99px;
+}
 
 .navbar {
   position: fixed;
@@ -65,6 +76,9 @@
 }
 
 /* Portfolio Cards */
+#portfolio {
+  margin-top: 10%;
+}
 .card {
     width: 100%;
     max-width: 415px;
@@ -123,7 +137,7 @@
 
 /* Hero Section */
 .hero-section {
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 /* Styling for the logos */
@@ -411,6 +425,9 @@ i {
 
 footer {
     background-color: #2a2833;
+    width: 100%;           /* ocupa todo el ancho del footer */
+    text-align: center;    /* centra el texto */
+    gap: 10px; 
 }
 
 /* Cookies */

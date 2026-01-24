@@ -1,74 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Development Timeline – Antonio Estarlich</title>
-  <link rel="stylesheet" href="../styles/timeline.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph Tags -->
+    <meta property="og:title" content="Antonio Estarlich | Front-End Web Developer (Global & Remote)">
+    <meta property="og:description"
+        content="Responsive, mobile-first websites with SEO optimisation. Bilingual in Spanish and English. Based in the UK, available globally.">
+    <meta property="og:image" content="https://toniestarlich.github.io/images/me.jpg">
+    <meta property="og:url" content="https://toniestarlich.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Antonio Estarlich | Front-End Web Developer">
+    <meta name="twitter:description"
+        content="Bilingual Spanish/English developer building SEO-friendly websites for global clients.">
+    <meta name="twitter:image" content="https://toniestarlich.github.io/images/me.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://toniestarlich.github.io" />
+
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons (versión explícita) -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Style CSS -->
+<link rel="stylesheet" href="../styles/background.css">
+<link rel="stylesheet" href="../styles/style.css">
+<title>Toni Estarlich – Certifications & Projects Timeline</title>
+
+<style>
+* { box-sizing: border-box; }
+body { background-color: #474e5d; font-family: Helvetica, sans-serif; color: white; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #FFD700;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline containers */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  background-color: #FFD700;
+  border: 4px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Left / Right */
+.left { left: 0; }
+.left::after { right: -13px; } /* alineado con línea central */
+.right { left: 50%; }
+.right::after { left: -13px; } /* alineado con línea central */
+
+/* Arrows */
+.left::before, .right::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+.left::before { right: 30px; border-left-color: rgba(255,255,255,0.2); }
+.right::before { left: 30px; border-right-color: rgba(255,255,255,0.2); }
+
+/* Content */
+.content {
+  padding: 20px;
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 6px;
+  position: relative;
+}
+.content h2 { color: #FFD700; margin-bottom: 10px; }
+.content p { line-height: 1.5; }
+
+/* Responsive */
+@media screen and (max-width: 768px){
+  .timeline::after { left: 31px; transform: none; }
+  .container { width: 100%; padding-left: 70px; padding-right: 25px; }
+  .left::after, .right::after { left: 15px; right: auto; }
+  .left::before, .right::before { left: 60px; border-left-color: transparent; border-right-color: rgba(255,255,255,0.2); }
+  .right { left: 0; }
+}
+</style>
+
 </head>
 <body>
+<!-- navbar -->
+ <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Antonio Estarlich</a>
 
-<section class="timeline-section">
-  <h1>My Software & Web Development Journey</h1>
+        <!-- ICONOS -->
+        <div class="social-icons d-flex align-items-center">
+          <a href="https://www.linkedin.com/in/antonio-estarlich-81125220a/" target="_blank" class="me-2 text-primary">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/ToniEstarlich?tab=repositories" target="_blank" class="text-dark">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        
+        <!-- Dev Live -->
+       
+        <a><strong style="color: #FFD700; font-size: 60%; margin-bottom: 5px;">Now:</strong><a id="logo-container"></a> 
+        
+        <a class="text-live" href="https://toniestarlich.github.io/dev-live/" target="_blank" rel="noopener noreferrer">
+         Dev<span class="live-badge">LIVE<span class="live-dot"></span></span>
+        </a>
 
-  <div class="timeline">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="timeline-item">
-      <span class="year">2020</span>
-      <div class="content">
-        <h3>Start of Software Development Path</h3>
-        <p>
-          Began structured training in software and web development while working at Amazon.
-          Focus on Python, web fundamentals, and backend logic.
-        </p>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#intro-section">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="templates/contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
+</nav>
 
-    <div class="timeline-item">
-      <span class="year">2022</span>
-      <div class="content">
-        <h3>Web & JavaScript Specialisation</h3>
-        <p>
-          Built interactive front-end projects using HTML, CSS, JavaScript and Bootstrap.
-          Introduced testing with Jest and version control using Git/GitHub.
-        </p>
-      </div>
+<h1>Certifications & Projects Timeline</h1>
+
+<div class="timeline">
+
+  <!-- 2022 -->
+  <div class="container left">
+    <div class="content">
+      <h2>24/06/2022</h2>
+      <p>Computer & Technology for Developers</p>
     </div>
-
-    <div class="timeline-item">
-      <span class="year">2023</span>
-      <div class="content">
-        <h3>Full-Stack Development</h3>
-        <p>
-          Developed full-stack applications using Flask, Django, PostgreSQL and MVC architecture.
-          Completed 500+ CPD hours in Software Advanced & Web Development.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <span class="year">2024</span>
-      <div class="content">
-        <h3>Live Projects & Deployment</h3>
-        <p>
-          Created and deployed real applications such as <strong>Nihongo Quest</strong> and
-          <strong>Pixel Store</strong>. Focus on clean architecture, backend logic and scalability.
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <span class="year">2025</span>
-      <div class="content">
-        <h3>Level 5 Diploma & Professional Portfolio</h3>
-        <p>
-          Completed Level 5 Diploma (FHEQ equivalent). Actively building a professional portfolio
-          with React, advanced JavaScript and backend integrations.
-        </p>
-      </div>
-    </div>
-
   </div>
-</section>
-<script src="../JS/skills.js"></script>
+  <div class="container right">
+    <div class="content">
+      <h2>21/07/2022</h2>
+      <p>Version Control (Git)</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>06/08/2022</h2>
+      <p>HTML</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>11/09/2022</h2>
+      <p>CSS & Bootstrap</p>
+    </div>
+  </div>
+
+  <!-- 2023 -->
+  <div class="container left">
+    <div class="content">
+      <h2>04/01/2023</h2>
+      <p>Managing Software Development</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>02/01/2023</h2>
+      <p>JavaScript</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>05/01/2023</h2>
+      <p>Web Developer Diploma – Amazon</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>06/12/2023</h2>
+      <p>C# and .NET Framework – Part 1</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>09/11/2023</h2>
+      <p>Database & SQL</p>
+    </div>
+  </div>
+
+  <!-- 2024 -->
+  <div class="container right">
+    <div class="content">
+      <h2>20/02/2024</h2>
+      <p>C# and .NET Framework – Part 2</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>21/02/2024</h2>
+      <p>Advanced Software & Web Developer Diploma – Amazon</p>
+    </div>
+  </div>
+
+  <!-- Projects 2024-2026 -->
+  <div class="container right">
+    <div class="content">
+      <h2>29/08/2024</h2>
+      <p>Dentist Clinic Website – HTML, CSS, JS, Bootstrap<br>
+      <a href="https://toniestarlich.github.io/Smile-Clinic.github.io/" target="_blank">Live</a> | 
+      <a href="https://github.com/ToniEstarlich/Smile_Clinic" target="_blank">Repo</a></p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2>15/08/2025</h2>
+      <p>The Global News – HTML, CSS, JS, JSON, Jest<br>
+      <a href="https://toniestarlich.github.io/the-global-news.github.io-/" target="_blank">Live</a> | 
+      <a href="https://github.com/ToniEstarlich/The-Global-News" target="_blank">Repo</a></p>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2>12/11/2025</h2>
+      <p>Nihongo Quest – HTML, CSS, JS, Flask, PostgreSQL, Python<br>
+      <a href="https://nihongo-quest-app-54ed3ed7b8f5.herokuapp.com/" target="_blank">Live</a> | 
+      <a href="https://github.com/ToniEstarlich/nihongo-quest" target="_blank">Repo</a></p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2>15/01/2026</h2>
+      <p>Pixel Store – Full Stack Development – HTML, CSS, JS, Flask, PostgreSQL, Python<br>
+      <a href="https://pixel-store-6fb82487a320.herokuapp.com/" target="_blank">Live</a> | 
+      <a href="https://github.com/ToniEstarlich/pixel-store" target="_blank">Repo</a></p>
+    </div>
+  </div>
+
+
+    <!-- background -->
+<div id="bg-container">
+    <canvas id="canvas"></canvas>
+</div>
+</div>
+<script src="../JS/background.js" defer></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Footer -->
+<footer class=" text-white py-4 text-center">
+    <p>&copy; 2025 Antonio Estarlich. All rights reserved.</p>
+</footer>
 </body>
 </html>
