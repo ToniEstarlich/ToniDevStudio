@@ -83,13 +83,14 @@ class ToniLogo extends HTMLElement {
         @media (max-width: 576px) {
           .name { font-size: calc(${font}px * 0.6); }
         }
-
+      
         .c1 { background-color: #FF0000; }
         .c2 { background-color: #FF7F00; }
         .c3 { background-color: #FFFF00; }
         .c4 { background-color: #55ff00; }
         .c5 { background-color: #0000FF; }
         .c6 { background-color: #bf00ff; }
+ 
 
         @keyframes zoomIn {
           to {

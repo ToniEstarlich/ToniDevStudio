@@ -448,3 +448,14 @@ footer {
   text-align: center;
   z-index: 2;
 }
+
+/* Muted chromatic palette – professional & minimal */
+
+.testing { color: #b84a4a; } /* muted red */
+.html    { color: #c47a3c; } /* muted orange */
+.js      { color: #b5a842; } /* muted yellow */
+.py      { color: #6fa15f; } /* muted green */
+.sql     { color: #4f6fa8; } /* muted blue */
+.css     { color: #8a5fa1; } /* muted violet */
+
+
