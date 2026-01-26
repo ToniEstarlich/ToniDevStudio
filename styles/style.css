@@ -450,12 +450,24 @@ footer {
 }
 
 /* Muted chromatic palette – professional & minimal */
+.card-title { color: #b6b6b6; } /* muted red */
+.testing { color: #b6b6b6; } /* muted red */
+.html    { color:  #b6b6b6;} /* muted orange */
+.js      { color: #b6b6b6; } * /* muted yellow */
+.py      { color:  #b6b6b6;} /* muted green */
+.py      { color:  #b6b6b6;} /* muted green */
+.py      { color: #b6b6b6; } /* muted green */
+.py      { color:  #b6b6b6; } /* muted green */
+.sql     { color: #b6b6b6; } /* muted blue */
+.css     { color: #b6b6b6; } /* muted violet */
 
-.testing { color: #b84a4a; } /* muted red */
-.html    { color: #c47a3c; } /* muted orange */
-.js      { color: #b5a842; } /* muted yellow */
-.py      { color: #6fa15f; } /* muted green */
-.sql     { color: #4f6fa8; } /* muted blue */
-.css     { color: #8a5fa1; } /* muted violet */
+.tech {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.tech:hover {
+  filter: brightness(1.2);
+}
 
 
