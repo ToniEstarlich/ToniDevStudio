@@ -5,12 +5,12 @@
       this.container = document.querySelector(selector);
       this.projects = projects;
       this.current = 0;
-
-      this.injectCSS();
-      this.renderHTML();
-      this.cacheElements();
-      this.bindEvents();
-      this.playCurrent();
+                             // Initialization steps with his language elements
+      this.injectCSS();      // 🟪 css
+      this.renderHTML();     // 🟧 html
+      this.cacheElements();  // 🟨 js
+      this.bindEvents();     // 🟨 js
+      this.playCurrent();    // 🟨 js
     }
 
     injectCSS() {
