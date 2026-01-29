@@ -7,8 +7,16 @@ body {
    font-family: system-ui, -apple-system, BlinkMacSystemFont;     
 }
 
+/* Normal logo margin for desktop */
 .logo {
-  margin-top: 99px;
+  margin-top: 5rem;
+}
+
+/* Increase top margin for smartphones */
+@media (max-width: 600px) {
+  .logo {
+    margin-top: 10rem;
+  }
 }
 
 .navbar {
