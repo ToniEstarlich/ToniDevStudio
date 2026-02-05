@@ -35,3 +35,11 @@ document.getElementById("toggle-es").addEventListener("click", function () {
     esContent.style.display = esContent.style.display === "none" ? "block" : "none";
   });
 
+// whatsaap widget
+
+// main.js
+import "../components/whatsapp.js";
+
+
+
+
