@@ -1,3 +1,6 @@
+import { WHATSAPP_NUMBER } from "../JS/config.js";
+const phone = WHATSAPP_NUMBER;
+
 class WhatsAppWidget extends HTMLElement {
   constructor() {
     super();
