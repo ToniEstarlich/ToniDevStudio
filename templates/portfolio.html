@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Netflix Stack Component</title>
+
+<style>
+body{
+  margin:0;
+  background:#111;
+  font-family:sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+
+.netflix-stack{
+  position:relative;
+  width:260px;
+  height:380px;
+  perspective:1000px;
+}
+
+.netflix-stack input{
+  display:none;
+}
+
+.netflix-stack article{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:16px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:.5s ease;
+  transform:scale(.85) translateY(40px);
+  opacity:.5;
+  z-index:0;
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+.netflix-stack article img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.netflix-stack input:checked + article{
+  transform:translateY(0) scale(1);
+  opacity:1;
+  z-index:10;
+}
+
+/* posiciones stack */
+.netflix-stack article:nth-of-type(1){ left:-40px }
+.netflix-stack article:nth-of-type(2){ left:0 }
+.netflix-stack article:nth-of-type(3){ left:40px }
+.netflix-stack article:nth-of-type(4){ left:80px }
+</style>
+</head>
+<body>
+
+<div class="netflix-stack" id="stack"></div>
+
+<script>
+const data = [
+ {img:"https://picsum.photos/id/1015/400/600"},
+ {img:"https://picsum.photos/id/1016/400/600"},
+ {img:"https://picsum.photos/id/1018/400/600"},
+ {img:"https://picsum.photos/id/1020/400/600"}
+];
+
+const stack = document.getElementById("stack");
+
+data.forEach((card,i)=>{
+  const id = "card"+i;
+
+  stack.innerHTML += `
+    <label>
+      <input type="radio" name="stack" ${i===1?"checked":""}>
+      <article>
+        <img src="${card.img}">
+      </article>
+    </label>
+  `;
+});
+</script>
+
+</body>
+</html>
