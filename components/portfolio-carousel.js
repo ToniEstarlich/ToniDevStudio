@@ -323,7 +323,7 @@
   },
   {
     title: "Pixel Store",
-    description: "Online store for digital products with shopping cart and simulated payments.",
+    description: "A fictional clothing store built to demonstrate e-commerce functionality, including product browsing, cart management, and a mock checkout powered by Stripe.",
     technologies: ["JavaScript", "HTML", "CSS", "Python", "Django", "PostgreSQL"],
     video: "videos/pixel.mp4",
     live: "https://pixel-store-6fb82487a320.herokuapp.com/",
