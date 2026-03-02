@@ -42,12 +42,12 @@
     <!-- Bootstrap Icons (versión explícita) -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Style CSS -->
+    <!-- Style CSS 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/slide.css">
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/background.css">
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/header.css">-->
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -62,6 +62,451 @@
         gtag('config', 'G-RWDEE98F2Z');
     </script>
 </head>
+
+<style>
+    /* =========================
+RESET + BASE
+========================= */
+
+*,
+*::before,
+*::after{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html,body{
+height:100%;
+font-family:'Raleway',sans-serif;
+background:#0a0a0a;
+color:white;
+scroll-behavior:smooth;
+}
+
+
+/* =========================
+NAVBAR MODERNA
+========================= */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.navbar a{
+color:white!important;
+font-weight:500;
+letter-spacing:.5px;
+}
+
+.navbar a:hover{
+color:#FFD700!important;
+}
+
+.navbar-toggler{
+border:none;
+}
+
+.navbar-toggler:focus{
+box-shadow:none;
+}
+
+
+/* =========================
+SOCIAL ICONS
+========================= */
+
+.social-icons a{
+font-size:1.4rem;
+transition:.25s;
+}
+
+.social-icons a:hover{
+transform:scale(1.2);
+color:#FFD700!important;
+}
+
+
+/* =========================
+DEV LIVE BADGE
+========================= */
+
+.text-live{
+margin-left:15px;
+font-weight:600;
+color:white;
+text-decoration:none;
+}
+
+.live-badge{
+background:#FFD700;
+color:black;
+padding:2px 6px;
+margin-left:5px;
+border-radius:4px;
+font-size:.7rem;
+position:relative;
+}
+
+.live-dot{
+width:6px;
+height:6px;
+background:red;
+border-radius:50%;
+display:inline-block;
+margin-left:4px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:1}
+50%{opacity:.3}
+100%{opacity:1}
+}
+
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero{
+position:relative;
+height:100vh;
+width:100%;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+
+/* texto encima slider */
+
+.hero-content{
+position:absolute;
+z-index:100;
+text-align:center;
+pointer-events:none;
+}
+
+.hero-content h1{
+font-size:clamp(2rem,6vw,4rem);
+font-weight:700;
+letter-spacing:1px;
+text-shadow:0 5px 20px rgba(0,0,0,.7);
+animation:fadeUp 1.5s ease;
+}
+
+
+/* animación entrada */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+/* =========================
+COOKIE BANNER
+========================= */
+
+#cookieConsent{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#111;
+border:1px solid rgba(255,255,255,.1);
+padding:15px 25px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+display:none;
+z-index:2000;
+max-width:90%;
+text-align:center;
+}
+
+#cookieConsent button{
+margin-top:10px;
+font-weight:bold;
+border-radius:8px;
+transition:.25s;
+}
+
+#cookieConsent button:hover{
+transform:scale(1.05);
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:#000;
+border-top:1px solid rgba(255,255,255,.08);
+font-size:.9rem;
+}
+
+
+/* =========================
+SCROLLBAR MODERNO
+========================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+background:#FFD700;
+border-radius:20px;
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.navbar{
+padding:10px 15px;
+}
+
+.hero-content h1{
+font-size:2.2rem;
+}
+
+}
+
+
+/* =========================
+SMOOTH FADE PAGE LOAD
+========================= */
+
+body{
+animation:pageFade .8s ease;
+}
+
+@keyframes pageFade{
+from{opacity:0}
+to{opacity:1}
+}
+
+#portfolio-carousel,
+.bg-slider,
+.slide{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+}
+
+.slide{
+opacity:0;
+transition:opacity 1.2s ease;
+}
+
+.slide.active{
+opacity:1;
+z-index:1;
+}
+
+.slide video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.2));
+}
+
+.content{
+position:absolute;
+bottom:15%;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
+color:white;
+max-width:700px;
+padding:20px;
+}
+
+.content h2{
+font-size:2.5rem;
+margin-bottom:10px;
+}
+
+.tech{
+margin-top:15px;
+}
+
+.tech span{
+border:1px solid rgba(255,255,255,.4);
+padding:5px 10px;
+margin:4px;
+display:inline-block;
+font-size:.8rem;
+border-radius:20px;
+}
+
+.links{
+margin-top:20px;
+}
+
+.links a{
+margin:0 10px;
+padding:10px 20px;
+border-radius:30px;
+background:#FFD700;
+color:black;
+font-weight:bold;
+text-decoration:none;
+transition:.3s;
+}
+
+.links a:hover{
+transform:scale(1.1);
+}
+
+.pc-wrapper{
+position:absolute;
+inset:0;
+overflow:hidden;
+}
+
+.pc-slides{
+height:100%;
+width:100%;
+position:relative;
+}
+
+.pc-slide{
+position:absolute;
+inset:0;
+opacity:0;
+transition:1s ease;
+}
+
+.pc-slide.active{
+opacity:1;
+z-index:2;
+}
+
+.pc-slide video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.pc-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(transparent, rgba(0,0,0,.7));
+z-index:2;
+}
+
+.pc-content{
+position:absolute;
+bottom:15%;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
+z-index:3;
+max-width:700px;
+padding:20px;
+}
+
+.pc-content h2{
+font-size:clamp(2rem,5vw,3.5rem);
+font-weight:700;
+margin-bottom:15px;
+}
+
+.pc-content p{
+opacity:.9;
+margin-bottom:20px;
+}
+
+.pc-tech{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-bottom:25px;
+}
+
+.pc-tech span{
+background:#FFD700;
+color:#000;
+padding:6px 12px;
+border-radius:20px;
+font-size:.8rem;
+font-weight:600;
+}
+
+.pc-buttons a{
+display:inline-block;
+margin:5px;
+padding:10px 20px;
+border:1px solid #FFD700;
+color:#FFD700;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.pc-buttons a:hover{
+background:#FFD700;
+color:#000;
+}
+
+.pc-nav{
+position:absolute;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+z-index:5;
+}
+
+.pc-nav button{
+width:14px;
+height:14px;
+border-radius:50%;
+border:none;
+background:white;
+opacity:.4;
+cursor:pointer;
+transition:.3s;
+}
+
+.pc-nav button.active{
+opacity:1;
+background:#FFD700;
+}
+</style>
 
 <body>
 
@@ -107,111 +552,16 @@
         </div>
     </div>
 </nav>
-<!--logo-->
 
-<div class="logo d-flex flex-column justify-content-center align-items-center">
-  <toni-logo size="large"></toni-logo>
-  <p class="lead mb-3">
-    Software & Web Developer
-  </p>
-</div>
+<!-- Slide-Background-->
+<section class="hero">
+  <div id="portfolio-carousel"></div>
 
-<a href="#portfolio" class="btn btn-lg">View My Work</a><br>
-<a href="#intro-section" class="btn btn-lg">About me</a>
-
- <!-- Workflow component 
-      <div class="container">
-        <h1>My Full-Stack Workflow 2026</h1>
-      
-        <workflow-card index="0"></workflow-card>
-        <workflow-card index="1"></workflow-card>
-        <workflow-card index="2"></workflow-card>
-        <workflow-card index="3"></workflow-card>
-        <workflow-card index="4"></workflow-card>
-      </div>
-
-<!--workflow js component
-<script type="module" src="components/workflowcard.js"></script>
--->
-
-<!-- Portfolio Section --> 
-<section id="portfolio" class="py-1">
-  <div class="container">
-
-    <h2 class="display-5 text-center mb-1">My Portfolio</h2>
-
-    <p style="text-align:center; margin-top:1rem; font-size:0.9rem; color:#787373;">
-      Please click the icons to view the Repo
-      <i class="bi bi-github" style="margin:0 0.25rem; font-size:1.5rem;"></i>
-      and Live
-      <i class="bi bi-box-arrow-up-right" style="margin:0 0.25rem; font-size:1.5rem;"></i>.
-    </p>
-
-    <div class="row">
-      <div id="portfolio-carousel"></div>
-      <!--<div id="portfolio-carousel"></div>-->
-    </div>
+  <div class="hero-content">
+    
   </div>
 </section>
-
-<!-- Intro Section: Hero + About -->
-<section class="intro-section py-0" id="intro-section">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- Left: Image + Title -->
-      <div class="col-lg-5 text-center mb-4 mb-lg-0">
-        <img src="images/me.jpg" alt="Antonio Estarlich"
-             class="rounded-circle img-fluid mb-3"
-             style="width: 220px; height: 220px;">
-        <h1 class="display-5 mb-2">Antonio Estarlich</h1>
-        <p class="lead mb-3">
-          Software & Web Developer
-        </p>
-        <a href="#portfolio" class="btn btn-lg">View My Work</a>
-      </div>
-
-      <!-- Right: About -->
-      <div class="col-lg-7">
-        <h2 class="mb-1">About Me</h2>
-
-        <p>
-          I build web applications with a strong focus on backend logic,
-          clean architecture, and practical problem-solving.
-          My work spans<strong></strong> full-stack systems including APIs, databases, and modern front-end interfaces.
-        </p>
-
-        <p>
-          Over the past years, I’ve developed and deployed projects such as interactive learning platforms,
-          e-commerce-style applications, and dynamic content-driven websites.
-          These projects demonstrate my ability to design, build, and maintain complete software systems.
-        </p>
-
-        <p>
-          I’m currently expanding toward AI-driven applications and 3D interactive experiences,
-          building on a solid foundation in software and web engineering.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WhatsApp Widget 
-<whatsapp-widget
-  message="Hi Toni, I saw your portfolio!"
-></whatsapp-widget>-->
-
-<script type="module" src="components/whatsapp.js"></script>
-<script type="module" src="JS/config.js"></script>
-
-<!-- Importar el componente -->
-<script type="module" src="components/whatsapp.js"></script>
-
-<!-- Portfolio Carousel Components -->
-<!--<script src="components/carousel-portfolio-n.js"></script>-->
-<script src="components/portfolio-carousel.js"></script>
-
+<script  src="components/slide-background.js"></script>
 
 <!-- Footer -->
 <footer class=" text-white py-4 text-center">
