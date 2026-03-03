@@ -1,612 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta property="og:image" content="https://toniestarlich.github.io/images/me.jpg" />
-    <title>Antonio Estarlich | full-stack Web Developer | Global & Remote</title>
-    <meta name="description" content="Portfolio of Antonio Estarlich, a full-stack web developer open to global and remote work. Projects in HTML, CSS, JavaScript, Python/Flask.">
-    
-    <meta name="description"
-        content="Antonio Estarlich is a bilingual front-end web developer offering responsive, SEO-friendly websites and digital solutions globally. Based in the UK, available for remote projects worldwide.">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<!-- Bootstrap Icons (versión explícita) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <meta name="keywords"
-        content="front-end developer, web developer, bilingual developer, responsive websites, remote web development, SEO web design, HTML CSS JavaScript developer, React developer, freelance web developer, Antonio Estarlich, UK web developer, Spain web developer, international web projects, full-stack in training">
+<title>Antonio Estarlich | full-stack Web Developer | Global & Remote</title>
 
-    <meta name="author" content="Antonio Estarlich">
-
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Antonio Estarlich | Front-End Web Developer (Global & Remote)">
-    <meta property="og:description"
-        content="Responsive, mobile-first websites with SEO optimisation. Bilingual in Spanish and English. Based in the UK, available globally.">
-    <meta property="og:image" content="https://toniestarlich.github.io/images/me.jpg">
-    <meta property="og:url" content="https://toniestarlich.github.io">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:locale:alternate" content="es_ES">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Antonio Estarlich | Front-End Web Developer">
-    <meta name="twitter:description"
-        content="Bilingual Spanish/English developer building SEO-friendly websites for global clients.">
-    <meta name="twitter:image" content="https://toniestarlich.github.io/images/me.jpg">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://toniestarlich.github.io" />
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons (versión explícita) -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Style CSS 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/slide.css">
-    <link rel="stylesheet" href="styles/skills.css">
-    <link rel="stylesheet" href="styles/background.css">
-    <link rel="stylesheet" href="styles/header.css">-->
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWDEE98F2Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-RWDEE98F2Z');
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style-2.css">
 </head>
-
-<style>
-    /* =========================
-RESET + BASE
-========================= */
-
-*,
-*::before,
-*::after{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html,body{
-height:100%;
-font-family:'Raleway',sans-serif;
-background:#0a0a0a;
-color:white;
-scroll-behavior:smooth;
-}
-
-
-/* =========================
-NAVBAR MODERNA
-========================= */
-
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-z-index:1000;
-background:rgba(0,0,0,.65);
-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,.08);
-transition:.4s;
-}
-
-.navbar a{
-color:white!important;
-font-weight:500;
-letter-spacing:.5px;
-}
-
-.navbar a:hover{
-color:#FFD700!important;
-}
-
-.navbar-toggler{
-border:none;
-}
-
-.navbar-toggler:focus{
-box-shadow:none;
-}
-
-
-/* =========================
-SOCIAL ICONS
-========================= */
-
-.social-icons a{
-font-size:1.4rem;
-transition:.25s;
-}
-
-.social-icons a:hover{
-transform:scale(1.2);
-color:#FFD700!important;
-}
-
-
-/* =========================
-DEV LIVE BADGE
-========================= */
-
-.text-live{
-margin-left:15px;
-font-weight:600;
-color:white;
-text-decoration:none;
-}
-
-.live-badge{
-background:#FFD700;
-color:black;
-padding:2px 6px;
-margin-left:5px;
-border-radius:4px;
-font-size:.7rem;
-position:relative;
-}
-
-.live-dot{
-width:6px;
-height:6px;
-background:red;
-border-radius:50%;
-display:inline-block;
-margin-left:4px;
-animation:pulse 1s infinite;
-}
-
-@keyframes pulse{
-0%{opacity:1}
-50%{opacity:.3}
-100%{opacity:1}
-}
-
-
-/* =========================
-HERO SECTION
-========================= */
-
-.hero{
-position:relative;
-height:100vh;
-width:100%;
-overflow:hidden;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-
-/* texto encima slider */
-
-.hero-content{
-position:absolute;
-z-index:100;
-text-align:center;
-pointer-events:none;
-}
-
-.hero-content h1{
-font-size:clamp(2rem,6vw,4rem);
-font-weight:700;
-letter-spacing:1px;
-text-shadow:0 5px 20px rgba(0,0,0,.7);
-animation:fadeUp 1.5s ease;
-}
-
-
-/* animación entrada */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-
-/* =========================
-COOKIE BANNER
-========================= */
-
-#cookieConsent{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-background:#111;
-border:1px solid rgba(255,255,255,.1);
-padding:15px 25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-display:none;
-z-index:2000;
-max-width:90%;
-text-align:center;
-}
-
-#cookieConsent button{
-margin-top:10px;
-font-weight:bold;
-border-radius:8px;
-transition:.25s;
-}
-
-#cookieConsent button:hover{
-transform:scale(1.05);
-}
-
-
-/* =========================
-FOOTER
-========================= */
-
-footer{
-background:#000;
-border-top:1px solid rgba(255,255,255,.08);
-font-size:.9rem;
-}
-
-
-/* =========================
-SCROLLBAR MODERNO
-========================= */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-track{
-background:#111;
-}
-
-::-webkit-scrollbar-thumb{
-background:#FFD700;
-border-radius:20px;
-}
-
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-.navbar{
-padding:10px 15px;
-}
-
-.hero-content h1{
-font-size:2.2rem;
-}
-
-}
-
-
-/* =========================
-SMOOTH FADE PAGE LOAD
-========================= */
-
-body{
-animation:pageFade .8s ease;
-}
-
-@keyframes pageFade{
-from{opacity:0}
-to{opacity:1}
-}
-
-#portfolio-carousel,
-.bg-slider,
-.slide{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-}
-
-.slide{
-opacity:0;
-transition:opacity 1.2s ease;
-}
-
-.slide.active{
-opacity:1;
-z-index:1;
-}
-
-.slide video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.2));
-}
-
-.content{
-position:absolute;
-bottom:15%;
-left:50%;
-transform:translateX(-50%);
-text-align:center;
-color:white;
-max-width:700px;
-padding:20px;
-}
-
-.content h2{
-font-size:2.5rem;
-margin-bottom:10px;
-}
-
-.tech{
-margin-top:15px;
-}
-
-.tech span{
-border:1px solid rgba(255,255,255,.4);
-padding:5px 10px;
-margin:4px;
-display:inline-block;
-font-size:.8rem;
-border-radius:20px;
-}
-
-.links{
-margin-top:20px;
-}
-
-.links a{
-margin:0 10px;
-padding:10px 20px;
-border-radius:30px;
-background:#FFD700;
-color:black;
-font-weight:bold;
-text-decoration:none;
-transition:.3s;
-}
-
-.links a:hover{
-transform:scale(1.1);
-}
-
-.pc-wrapper{
-position:absolute;
-inset:0;
-overflow:hidden;
-}
-
-.pc-slides{
-height:100%;
-width:100%;
-position:relative;
-}
-
-.pc-slide{
-position:absolute;
-inset:0;
-opacity:0;
-transition:1s ease;
-}
-
-.pc-slide.active{
-opacity:1;
-z-index:2;
-}
-
-.pc-slide video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.pc-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(transparent, rgba(0,0,0,.7));
-z-index:2;
-}
-
-.pc-content{
-position:absolute;
-bottom:15%;
-left:50%;
-transform:translateX(-50%);
-text-align:center;
-z-index:3;
-max-width:700px;
-padding:20px;
-}
-
-.pc-content h2{
-font-size:clamp(2rem,5vw,3.5rem);
-font-weight:700;
-margin-bottom:15px;
-}
-
-.pc-content p{
-opacity:.9;
-margin-bottom:20px;
-}
-
-.pc-tech{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-margin-bottom:25px;
-}
-
-.pc-tech span{
-background:#FFD700;
-color:#000;
-padding:6px 12px;
-border-radius:20px;
-font-size:.8rem;
-font-weight:600;
-}
-
-.pc-buttons a{
-display:inline-block;
-margin:5px;
-padding:10px 20px;
-border:1px solid #FFD700;
-color:#FFD700;
-text-decoration:none;
-border-radius:30px;
-transition:.3s;
-}
-
-.pc-buttons a:hover{
-background:#FFD700;
-color:#000;
-}
-
-.pc-nav{
-position:absolute;
-bottom:30px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-gap:10px;
-z-index:5;
-}
-
-.pc-nav button{
-width:14px;
-height:14px;
-border-radius:50%;
-border:none;
-background:white;
-opacity:.4;
-cursor:pointer;
-transition:.3s;
-}
-
-.pc-nav button.active{
-opacity:1;
-background:#FFD700;
-}
-</style>
-
 <body>
 
-<!-- Cookie Consent Banner -->
-<div id="cookieConsent" >
-    <p>We use cookies to improve your experience on our site. By using our site, you agree to our <a href="Cookies/privacy-policy.html" style="color: #FFD700;">privacy policy</a> and <a href="Cookies/cookie-policy.html" style="color: #FFD700;">cookie policy</a>.</p>
-    <button id="acceptCookies" style="background-color: #FFD700; color: black; padding: 10px 20px; border: none; cursor: pointer;">Accept</button>
+<div class="video_bg_container">
+  <video src="videos/nihongo_quest.mp4" muted loop autoplay playsinline class="active"></video>
+  <video src="videos/pixel.mp4" muted loop autoplay playsinline></video>
+  <video src="videos/global_news.mp4" muted loop autoplay playsinline></video>
+  <video src="videos/smile_clinic.mp4" muted loop autoplay playsinline></video>
+  <video src="videos/burguer.mp4" muted loop autoplay playsinline></video>
+  <video src="videos/planet_book.mp4" muted loop autoplay playsinline></video>
 </div>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg ">
-    <div class="container-fluid">
+<div class="overlay"></div>
 
-        <!-- ICONOS -->
-        <div class="social-icons d-flex align-items-center">
-          <a href="https://www.linkedin.com/in/antonio-estarlich-81125220a/" target="_blank" class="me-2 text-primary">
-            <i class="bi bi-linkedin"></i>
+
+<div class="container">
+ <div class="headers">
+    <h2>Antonio Estarlich</h2>
+
+    <ul>
+        <li>
+            <a href="https://www.linkedin.com/in/antonio-estarlich-81125220a/" target="_blank" class="me-2 text-primary">
+            <i class="bi bi-linkedin" style="color: aliceblue;"></i></a></li>
+        <li>
+            <a href="https://github.com/ToniEstarlich?tab=repositories" target="_blank" class="text-dark">
+            <i class="bi bi-github" style="color: aliceblue;"></i>
           </a>
-          <a href="https://github.com/ToniEstarlich?tab=repositories" target="_blank" class="text-dark">
-            <i class="bi bi-github"></i>
-          </a>
-        </div>
-        
-        <!-- Dev Live -->
-       
-        <a><strong style="color: #FFD700; font-size: 60%; margin-bottom: 5px;">Now:</strong><a id="logo-container"></a> 
-        
-        <a class="text-live" href="https://toniestarlich.github.io/dev-live/" target="_blank" rel="noopener noreferrer">
-         Dev<span class="live-badge">LIVE<span class="live-dot"></span></span>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#intro-section">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> -->
-                <li class="nav-item"><a class="nav-link" href="templates/contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- Slide-Background-->
-<section class="hero">
-  <div id="portfolio-carousel"></div>
-
-  <div class="hero-content">
-    
+        </li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="templates/contact.html">Contact</a></li>
+    </ul>
   </div>
-</section>
-<script  src="components/slide-background.js"></script>
 
-<!-- Footer -->
-<footer class=" text-white py-4 text-center">
-    <p>&copy; 2026 Antonio Estarlich. All rights reserved.</p>
-    <bw-logo size="small"></bw-logo>
-</footer>
+  <div class="description">
+    <h1 class="display-5 mb-2"></h1>
 
-    <!-- include the plain JS component (make sure path is correct) -->
-  <script src="components/AD-dev_lab.js"></script>
-  <script src="components/small-logo.js"></script>
+    <div class="project_info" id="projectInfo">
+      <h3>Nihongo Quest</h3>
+      <p>Educational game to learn Japanese with quests and quizzes.</p>
+      <a href="https://nihongo-quest-app-54ed3ed7b8f5.herokuapp.com/" target="_blank">Live</a>
+      <a href="https://github.com/ToniEstarlich/nihongo-quest" target="_blank">Repo</a>
+    </div>
+  </div>
 
-<!-- component Logo -->
- <script src="components/toni-logo.js" defer></script>
- <script type="module" src="components/bw-logo.js" defer></script>
+<div class="video_slider" id="slider"></div>
+</div>
 
-<!--JavaScript files-->
-<script src="JS/main.js" defer></script>
-<script src="JS/slide.js" defer></script>
-<script src="JS/skills.js" defer></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<!--Cookies-->
-<script>
-    // Check if the user has already accepted cookies
-    if (localStorage.getItem('cookiesAccepted') !== 'true') {
-        document.getElementById('cookieConsent').style.display = 'block';
-    }
 
-    // When the user accepts the cookies
-    document.getElementById('acceptCookies').addEventListener('click', function () {
-        localStorage.setItem('cookiesAccepted', 'true');
-        document.getElementById('cookieConsent').style.display = 'none';
-    });
-</script>
-
+<script src="JS/main-2.js"></script>
 </body>
 </html>
-
-<!-- strong for separed back and front language
-class="testing" 
-class="html"
-class="js" 
-class="py" 
-class="sql" 
-class="css" 
--->
