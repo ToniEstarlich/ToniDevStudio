@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:image" content="https://toniestarlich.github.io/images/me.jpg" />
+    <title>Antonio Estarlich | full-stack Web Developer | Global & Remote</title>
+    <meta name="description" content="Portfolio of Antonio Estarlich, a full-stack web developer open to global and remote work. Projects in HTML, CSS, JavaScript, Python/Flask.">
+    
+    <meta name="description"
+        content="Antonio Estarlich is a bilingual front-end web developer offering responsive, SEO-friendly websites and digital solutions globally. Based in the UK, available for remote projects worldwide.">
+
+    <meta name="keywords"
+        content="front-end developer, web developer, bilingual developer, responsive websites, remote web development, SEO web design, HTML CSS JavaScript developer, React developer, freelance web developer, Antonio Estarlich, UK web developer, Spain web developer, international web projects, full-stack in training">
+
+    <meta name="author" content="Antonio Estarlich">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Antonio Estarlich | Front-End Web Developer (Global & Remote)">
+    <meta property="og:description"
+        content="Responsive, mobile-first websites with SEO optimisation. Bilingual in Spanish and English. Based in the UK, available globally.">
+    <meta property="og:image" content="https://toniestarlich.github.io/images/me.jpg">
+    <meta property="og:url" content="https://toniestarlich.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Antonio Estarlich | Front-End Web Developer">
+    <meta name="twitter:description"
+        content="Bilingual Spanish/English developer building SEO-friendly websites for global clients.">
+    <meta name="twitter:image" content="https://toniestarlich.github.io/images/me.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://toniestarlich.github.io" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons (versión explícita) -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/slide.css">
+    <link rel="stylesheet" href="styles/skills.css">
+    <link rel="stylesheet" href="styles/background.css">
+    <link rel="stylesheet" href="styles/header.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWDEE98F2Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RWDEE98F2Z');
+    </script>
+</head>
+
+<body>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" >
+    <p>We use cookies to improve your experience on our site. By using our site, you agree to our <a href="Cookies/privacy-policy.html" style="color: #FFD700;">privacy policy</a> and <a href="Cookies/cookie-policy.html" style="color: #FFD700;">cookie policy</a>.</p>
+    <button id="acceptCookies" style="background-color: #FFD700; color: black; padding: 10px 20px; border: none; cursor: pointer;">Accept</button>
+</div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+
+        <!-- ICONOS -->
+        <div class="social-icons d-flex align-items-center">
+          <a href="https://www.linkedin.com/in/antonio-estarlich-81125220a/" target="_blank" class="me-2 text-primary">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/ToniEstarlich?tab=repositories" target="_blank" class="text-dark">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        
+        <!-- Dev Live -->
+       
+        <a><strong style="color: #FFD700; font-size: 60%; margin-bottom: 5px;">Now:</strong><a id="logo-container"></a> 
+        
+        <a class="text-live" href="https://toniestarlich.github.io/dev-live/" target="_blank" rel="noopener noreferrer">
+         Dev<span class="live-badge">LIVE<span class="live-dot"></span></span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#intro-section">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="templates/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--logo-->
+
+<div class="logo d-flex flex-column justify-content-center align-items-center">
+  <toni-logo size="large"></toni-logo>
+  <p class="lead mb-3">
+    Software & Web Developer
+  </p>
+</div>
+
+<a href="#portfolio" class="btn btn-lg">View My Work</a><br>
+<a href="#intro-section" class="btn btn-lg">About me</a>
+
+ <!-- Workflow component 
+      <div class="container">
+        <h1>My Full-Stack Workflow 2026</h1>
+      
+        <workflow-card index="0"></workflow-card>
+        <workflow-card index="1"></workflow-card>
+        <workflow-card index="2"></workflow-card>
+        <workflow-card index="3"></workflow-card>
+        <workflow-card index="4"></workflow-card>
+      </div>
+
+<!--workflow js component
+<script type="module" src="components/workflowcard.js"></script>
+-->
+
+<!-- Portfolio Section --> 
+<section id="portfolio" class="py-1">
+  <div class="container">
+
+    <h2 class="display-5 text-center mb-1">My Portfolio</h2>
+
+    <p style="text-align:center; margin-top:1rem; font-size:0.9rem; color:#787373;">
+      Please click the icons to view the Repo
+      <i class="bi bi-github" style="margin:0 0.25rem; font-size:1.5rem;"></i>
+      and Live
+      <i class="bi bi-box-arrow-up-right" style="margin:0 0.25rem; font-size:1.5rem;"></i>.
+    </p>
+
+    <div class="row">
+      <div id="portfolio-carousel"></div>
+      <!--<div id="portfolio-carousel"></div>-->
+    </div>
+  </div>
+</section>
+
+<!-- Intro Section: Hero + About -->
+<section class="intro-section py-0" id="intro-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left: Image + Title -->
+      <div class="col-lg-5 text-center mb-4 mb-lg-0">
+        <img src="images/me.jpg" alt="Antonio Estarlich"
+             class="rounded-circle img-fluid mb-3"
+             style="width: 220px; height: 220px;">
+        <h1 class="display-5 mb-2">Antonio Estarlich</h1>
+        <p class="lead mb-3">
+          Software & Web Developer
+        </p>
+        <a href="#portfolio" class="btn btn-lg">View My Work</a>
+      </div>
+
+      <!-- Right: About -->
+      <div class="col-lg-7">
+        <h2 class="mb-1">About Me</h2>
+
+        <p>
+          I build web applications with a strong focus on backend logic,
+          clean architecture, and practical problem-solving.
+          My work spans<strong></strong> full-stack systems including APIs, databases, and modern front-end interfaces.
+        </p>
+
+        <p>
+          Over the past years, I’ve developed and deployed projects such as interactive learning platforms,
+          e-commerce-style applications, and dynamic content-driven websites.
+          These projects demonstrate my ability to design, build, and maintain complete software systems.
+        </p>
+
+        <p>
+          I’m currently expanding toward AI-driven applications and 3D interactive experiences,
+          building on a solid foundation in software and web engineering.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp Widget 
+<whatsapp-widget
+  message="Hi Toni, I saw your portfolio!"
+></whatsapp-widget>-->
+
+<script type="module" src="components/whatsapp.js"></script>
+<script type="module" src="JS/config.js"></script>
+
+<!-- Importar el componente -->
+<script type="module" src="components/whatsapp.js"></script>
+
+<!-- Portfolio Carousel Components -->
+<!--<script src="components/carousel-portfolio-n.js"></script>-->
+<script src="components/portfolio-carousel.js"></script>
+
+
+<!-- Footer -->
+<footer class=" text-white py-4 text-center">
+    <p>&copy; 2026 Antonio Estarlich. All rights reserved.</p>
+    <bw-logo size="small"></bw-logo>
+</footer>
+
+    <!-- include the plain JS component (make sure path is correct) -->
+  <script src="components/AD-dev_lab.js"></script>
+  <script src="components/small-logo.js"></script>
+
+<!-- component Logo -->
+ <script src="components/toni-logo.js" defer></script>
+ <script type="module" src="components/bw-logo.js" defer></script>
+
+<!--JavaScript files-->
+<script src="JS/main.js" defer></script>
+<script src="JS/slide.js" defer></script>
+<script src="JS/skills.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Cookies-->
+<script>
+    // Check if the user has already accepted cookies
+    if (localStorage.getItem('cookiesAccepted') !== 'true') {
+        document.getElementById('cookieConsent').style.display = 'block';
+    }
+
+    // When the user accepts the cookies
+    document.getElementById('acceptCookies').addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookieConsent').style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
+
+<!-- strong for separed back and front language
+class="testing" 
+class="html"
+class="js" 
+class="py" 
+class="sql" 
+class="css" 
+-->

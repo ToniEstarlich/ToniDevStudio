@@ -16,22 +16,16 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
+  color: rgb(248, 248, 248);
   z-index: 1000;
   padding: 10px 0;
-
-  background: rgba(255, 255, 255, 0.17);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.9px);
-  -webkit-backdrop-filter: blur(3.9px);
-  border: 1px solid rgba(255, 255, 255, 0.66);
+ 
 }
 
 /* Navbar links */
 .navbar a,
 .navbar .nav-link {
-    color: #7a7979 !important;
+  color: #ffffff !important;  
 }
 
 .navbar a:hover,
@@ -230,7 +224,7 @@ i {
 
 .service-icon {
     font-size: 3rem;
-    color: #41423d;
+    color: #e6e6e6;
     margin-bottom: 20px;
     transition: color 0.3s ease;
 }
@@ -271,7 +265,7 @@ i {
 
  .text-live {
     text-decoration: none;
-    color: #c5c5c5;
+    color: #ffffff;
     margin-left: 2%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5rem;
@@ -459,3 +453,6 @@ footer {
 .css     { color: #8a5fa1; } /* muted violet */
 
 
+.navbar-toggler {
+  color: #ffffff;
+}
