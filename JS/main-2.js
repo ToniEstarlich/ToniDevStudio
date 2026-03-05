@@ -98,7 +98,6 @@ const title = document.querySelector(".project-title");
 
 const aboutContent = `
   <!-- About Me -->
-    <!-- Imagen a la izquierda -->
     <img src="images/me.jpg" alt="Antonio Estarlich" class="about-photo">
 
     <!-- Card Mac Terminal -->
@@ -119,12 +118,19 @@ const aboutContent = `
                 <span class="terminal_cursor"></span>
             </div>
             <div class="about-text">
-                <p><strong>Antonio Estarlich</strong></p>
-                <p>Software & Web Developer</p>
-                <p>I design and build complete web applications with a strong focus on backend architecture, database systems, and scalable logic.</p>
-                <p>My experience includes APIs, relational databases, and modern front-end interfaces, delivering clean and efficient digital solutions.</p>
-                <p>Currently expanding into AI-driven applications and interactive 3D experiences.</p>
-            </div>
+            <p><strong>Antonio Estarlich</strong></p>
+            <p>Junior Full-Stack Web Developer</p>
+
+            <p>Developer with 4 years of training in software and web development, focused on building full-stack
+                applications with Python, Flask, Django and modern JavaScript.</p>
+
+            <p>Experienced in developing REST APIs, working with relational databases, and creating responsive front-end
+                interfaces.</p>
+
+            <p>Currently looking for my first professional role where I can contribute, continue learning, and grow as a
+                software developer.</p>
+
+        </div>
         </div>
     </div>
 </div>
