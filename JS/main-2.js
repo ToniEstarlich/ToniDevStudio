@@ -97,32 +97,41 @@ const title = document.querySelector(".project-title");
 // About me
 
 const aboutContent = `
-  <div class="about-slider-wrapper">
-    <div class="about-slider"></div> <!-- Aquí irán las imágenes de fondo -->
+  <!-- About Me -->
+    <!-- Imagen a la izquierda -->
+    <img src="images/me.jpg" alt="Antonio Estarlich" class="about-photo">
 
-    <div class="about-content">
-      <img src="images/me.jpg" alt="Antonio Estarlich" class="about-photo">
-
-      <div class="about-text">
-        <h3>Antonio Estarlich</h3>
-        <p class="about-role">Software & Web Developer</p>
-
-        <p>
-          I design and build complete web applications with a strong focus on
-          backend architecture, database systems, and scalable logic.
-        </p>
-
-        <p>
-          My experience includes APIs, relational databases, and modern front-end
-          interfaces.
-        </p>
-
-        <p>
-          Currently expanding into AI-driven applications and interactive 3D experiences.
-        </p>
-      </div>
+    <!-- Card Mac Terminal -->
+    <div class="card-mac">
+        <div class="terminal_toolbar">
+            <div class="butt">
+                <button class="btn-mac btn-color"></button>
+                <button class="btn-mac"></button>
+                <button class="btn-mac"></button>
+            </div>
+            <p class="user">antonio@dev: ~</p>
+        </div>
+        <div class="terminal_body">
+            <div class="terminal_promt">
+                <span class="terminal_user">antonio@dev:</span>
+                <span class="terminal_location">~</span>
+                <span class="terminal_bling">$</span>
+                <span class="terminal_cursor"></span>
+            </div>
+            <div class="about-text">
+                <p><strong>Antonio Estarlich</strong></p>
+                <p>Software & Web Developer</p>
+                <p>I design and build complete web applications with a strong focus on backend architecture, database systems, and scalable logic.</p>
+                <p>My experience includes APIs, relational databases, and modern front-end interfaces, delivering clean and efficient digital solutions.</p>
+                <p>Currently expanding into AI-driven applications and interactive 3D experiences.</p>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+</div>
+  
+
+<!-- End About Me -->
 `;
 
 document.getElementById("aboutBtn").addEventListener("click", function(e) {

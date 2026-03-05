@@ -1,0 +1,158 @@
+/* Contenedor principal flex */
+ .description {
+   display: flex;
+  }
+
+.project_info.about_block {
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+}
+
+.display-flex {
+  display: flex;
+}
+
+/* Imagen de perfil */
+.about-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #F5FF3B;
+  box-shadow: 0 0 15px rgba(245,255,59,0.6);
+  flex-shrink: 0;
+}
+
+/* Terminal Card Mac */
+.card-mac {
+  flex: 1;
+  min-width: 250px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0px;
+}
+
+/* Terminal Toolbar */
+.terminal_toolbar {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(#504b45 0%, #3c3b37 100%);
+}
+
+.butt {
+  display: flex;
+  align-items: center;
+}
+
+.btn-mac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 5px;
+  font-size: 8px;
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 100%;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+}
+
+.btn-color { background: #ee411a; }
+
+.btn-mac:hover { cursor: pointer; }
+.btn-mac:focus { outline: none; }
+
+.user {
+  color: #d5d0ce;
+  margin-left: 6px;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+/* Terminal Body */
+.terminal_body {
+  background: rgba(56, 4, 40, 0.9);
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #dddddd;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Prompt Line */
+.terminal_promt {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.terminal_promt span { margin-left: 4px; }
+
+.terminal_user { color: #7eda28; }
+.terminal_location { color: #4878c0; }
+.terminal_bling { color: #dddddd; }
+
+/* Cursor parpadeante */
+.terminal_cursor {
+  display: block;
+  height: 14px;
+  width: 5px;
+  margin-left: 10px;
+  animation: curbl 1200ms linear infinite;
+  background: #ffffff;
+}
+
+@keyframes curbl {
+  0%, 49% { background: #ffffff; }
+  50%, 99% { background: transparent; }
+  100% { background: #ffffff; }
+}
+
+/* About Text */
+.about-text p {
+  margin: 4px 0;
+}
+
+/* Responsive: Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .about-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card-mac {
+    min-width: 200px;
+  }
+}
+
+/* Responsive: Smartphones */
+@media (max-width: 768px) {
+  .description {
+   display: flex;
+  }
+  .project_info.about_block {
+    flex-direction: column; /* Imagen arriba, terminal abajo */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .card-mac {
+    width: 90%;
+    margin-top: 1rem;
+  }
+}
