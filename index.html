@@ -17,8 +17,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/style-2.css">
 <link rel="stylesheet" href="styles/card-mac.css">
+
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWDEE98F2Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RWDEE98F2Z');
+    </script>
 </head>
 <body>
+
+    <!-- Cookie Consent Banner -->
+<div id="cookieConsent" >
+    <p>We use cookies to improve your experience on our site. By using our site, you agree to our <a href="Cookies/privacy-policy.html" style="color: #FFD700;">privacy policy</a> and <a href="Cookies/cookie-policy.html" style="color: #FFD700;">cookie policy</a>.</p>
+    <button id="acceptCookies" style="background-color: #FFD700; color: black; padding: 10px 20px; border: none; cursor: pointer; z-index: 99999;">Accept</button>
+</div>
 
 <div class="video_bg_container">
   <video src="videos/nihongo_quest.mp4" muted loop autoplay playsinline class="active"></video>
@@ -100,9 +116,21 @@
 
 <div class="video_slider" id="slider"></div>
 
-
-
-
 <script src="JS/main-2.js"></script>
+
+<!--Cookies-->
+<script>
+    // Check if the user has already accepted cookies
+    if (localStorage.getItem('cookiesAccepted') !== 'true') {
+        document.getElementById('cookieConsent').style.display = 'block';
+    }
+
+    // When the user accepts the cookies
+    document.getElementById('acceptCookies').addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookieConsent').style.display = 'none';
+    });
+</script>
+
 </body>
 </html>
