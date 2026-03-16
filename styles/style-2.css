@@ -15,6 +15,14 @@ p {
   margin: 2%;
 }
 
+/* My name */
+.My-name{
+ background: #39FFF8;
+background: linear-gradient(to right, #39FFF8 0%, #F9FF41 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
 /* ===== VIDEO BACKGROUND ===== */
 .video_bg_container{
   position:fixed;
