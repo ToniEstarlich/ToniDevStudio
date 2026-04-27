@@ -1,0 +1,9 @@
+.tech-icon {
+  font-size: 28px;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}
