@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antonio Estarlich | Portfolio</title>
 
-<!-- Icons tech -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!--CSS-->
+  <link rel="stylesheet" href="styles/crockies.css">
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-<!-- Bootstrap Icons (versión explícita) -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-<title>Antonio Estarlich | full-stack Web Developer | Global & Remote</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/style-2.css">
-<link rel="stylesheet" href="styles/card-mac.css">
-<link rel="stylesheet" href="styles/thech-logo.css">
-
- <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWDEE98F2Z"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -31,96 +20,376 @@
 
         gtag('config', 'G-RWDEE98F2Z');
     </script>
+
+  <style>
+    :root{
+      --yellow:#ffd400;
+      --sky:#4cc9f0;
+      --dark:#0b0f17;
+      --card:#111827;
+      --text:#ffffff;
+      --muted:#b6c2cf;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--dark);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    /* NAV */
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 40px;
+      z-index:999;
+      background:rgba(11,15,23,0.6);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(76,201,240,0.15);
+    }
+
+    .logo{
+      font-weight:800;
+      letter-spacing:2px;
+      color:var(--yellow);
+    }
+
+    nav a{
+      color:var(--text);
+      text-decoration:none;
+      margin-left:25px;
+      font-weight:600;
+    }
+
+    nav a:hover{color:var(--sky);}
+
+    /* HERO */
+    header{
+      height:100vh;
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      align-items:center;
+      padding:0 60px;
+      gap:40px;
+    }
+
+    .hero-left h1{
+      font-size:64px;
+      margin:0;
+      line-height:1.05;
+      opacity:0;
+      transform:translateY(20px);
+      animation:fadeUp 1s ease forwards;
+    }
+
+    .hero-left p{
+      color:var(--muted);
+      font-size:18px;
+      margin-top:20px;
+      max-width:500px;
+      opacity:0;
+      transform:translateY(20px);
+      animation:fadeUp 1s ease forwards;
+      animation-delay:0.2s;
+    }
+
+    .cta{
+      margin-top:30px;
+      display:inline-block;
+      padding:14px 28px;
+      background:var(--yellow);
+      color:#000;
+      font-weight:800;
+      border-radius:40px;
+      cursor:pointer;
+      opacity:0;
+      transform:translateY(20px);
+      animation:fadeUp 1s ease forwards;
+      animation-delay:0.4s;
+    }
+
+    @keyframes fadeUp{
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    .hero-right{
+      position:relative;
+      height:70vh;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid rgba(76,201,240,0.2);
+    }
+
+    .slide{
+      position:absolute;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity 1s ease;
+    }
+
+    .slide.active{opacity:1;}
+
+    /* SECTIONS */
+    section{
+      padding:100px 60px;
+      max-width:1200px;
+      margin:auto;
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 0.8s ease;
+    }
+
+    section.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    h2{
+      font-size:34px;
+      margin-bottom:30px;
+      color:var(--sky);
+    }
+
+    /* SERVICES */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .service{
+      background:var(--card);
+      padding:25px;
+      border-radius:18px;
+      border:1px solid rgba(76,201,240,0.15);
+      transition:0.3s;
+    }
+
+    .service:hover{
+      transform:translateY(-5px);
+      border-color:var(--yellow);
+    }
+
+    .service h3{
+      color:var(--yellow);
+      margin-bottom:10px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:18px;
+      overflow:hidden;
+      padding:15px;
+      border:1px solid rgba(76,201,240,0.15);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:var(--yellow);
+    }
+
+    video{
+      width:100%;
+      border-radius:12px;
+    }
+
+    .desc{
+      color:var(--muted);
+      font-size:13px;
+      margin-top:10px;
+    }
+
+    .tech{
+      margin-top:10px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .tech i{
+      font-size:20px;
+      color:var(--sky);
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:55%;
+      border-radius:50%;
+      border:2px solid rgba(76,201,240,0.3);
+    }
+
+    footer{
+      padding:60px 20px;
+      text-align:center;
+      color:var(--muted);
+      border-top:1px solid rgba(76,201,240,0.15);
+      margin-top:80px;
+    }
+
+    footer span{
+      color:var(--yellow);
+      font-weight:700;
+    }
+
+    /* ========================= */
+    /* RESPONSIVE DESIGN         */
+    /* ========================= */
+
+    @media (max-width: 1024px){
+      header{
+        grid-template-columns:1fr;
+        height:auto;
+        padding:120px 40px 60px;
+      }
+
+      .hero-right{
+        height:400px;
+        margin-top:40px;
+      }
+
+      .hero-left h1{
+        font-size:52px;
+      }
+    }
+
+    @media (max-width: 768px){
+      nav{
+        padding:14px 20px;
+      }
+
+      nav a{
+        margin-left:12px;
+        font-size:14px;
+      }
+
+      section{
+        padding:80px 20px;
+      }
+
+      .hero-left h1{
+        font-size:40px;
+      }
+
+      .hero-left p{
+        font-size:16px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .about img{
+        width:70%;
+        margin:auto;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 480px){
+      .hero-left h1{
+        font-size:32px;
+      }
+
+      .cta{
+        width:100%;
+        text-align:center;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      .hero-right{
+        height:280px;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
-    <!-- Cookie Consent Banner -->
+<!-- Cookie Consent Banner -->
 <div id="cookieConsent" >
     <p>We use cookies to improve your experience on our site. By using our site, you agree to our <a href="Cookies/privacy-policy.html" style="color: #FFD700;">privacy policy</a> and <a href="Cookies/cookie-policy.html" style="color: #FFD700;">cookie policy</a>.</p>
     <button id="acceptCookies" style="background-color: #FFD700; color: black; padding: 10px 20px; border: none; cursor: pointer; z-index: 99999;">Accept</button>
 </div>
 
-<div class="video_bg_container">
-  <video src="videos/nihongo_quest.mp4" muted loop autoplay playsinline class="active"></video>
-  <video src="videos/pixel.mp4" muted loop autoplay playsinline></video>
-  <video src="videos/global_news.mp4" muted loop autoplay playsinline></video>
-  <video src="videos/smile_clinic.mp4" muted loop autoplay playsinline></video>
-  <video src="videos/burguer.mp4" muted loop autoplay playsinline></video>
-  <video src="videos/planet_book.mp4" muted loop autoplay playsinline></video>
-</div>
+<nav>
+  <div class="logo">TONI.DEV</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Work</a>
+  </div>
+</nav>
 
-<div class="overlay"></div>
-
-
-<div class="container">
- <div class="headers">
-    <h2 class="My-name">Antonio Estarlich</h2>
-
-    <ul>
-        <li>
-            <a href="https://www.linkedin.com/in/antonio-estarlich-81125220a/" target="_blank" class="me-2 text-primary">
-            <i class="bi bi-linkedin" style="color: aliceblue;"></i></a></li>
-        <li>
-            <a href="https://github.com/ToniEstarlich?tab=repositories" target="_blank" class="text-dark">
-            <i class="bi bi-github" style="color: aliceblue;"></i>
-          </a>
-        </li>
-      <li><a href="#" id="aboutBtn">About Me</a></li>
-      <li><a href="templates/contact.html">Contact</a></li>
-    </ul>
+<header>
+  <div class="hero-left">
+    <h1>Building <span class="typing" id="typing"></span></h1>
+    <p>Full Stack Developer focused on scalable systems, modern UI and real-world applications.</p>
+    <div class="cta" id="scrollBtn">View Work</div>
   </div>
 
-  <!-- About Me -->
+  <div class="hero-right">
+    <img class="slide active" src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" />
+    <img class="slide" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" />
+    <img class="slide" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" />
+    <img class="slide" src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" />
+  </div>
+</header>
 
-<div class="description">
-  <div class="project_info about_block" id="projectInfo"> 
-    <!-- Imagen a la izquierda -->
-    <img src="images/me.jpg" alt="Antonio Estarlich" class="about-photo">
-  
-    
-    
-<!-- Card Mac Terminal -->
-<div class="card-mac">
-    <div class="terminal_toolbar">
-        <div class="butt">
-            <button class="btn-mac btn-color"></button>
-            <button class="btn-mac"></button>
-            <button class="btn-mac"></button>
-        </div>
-        <p class="user">antonio@dev: ~</p>
-    </div>
-    <div class="terminal_body">
-        <div class="terminal_promt">
-            <span class="terminal_user">antonio@dev:</span>
-            <span class="terminal_location">~</span>
-            <span class="terminal_bling">$</span>
-            <span class="terminal_cursor"></span>
-        </div>
-        <div class="about-text">
-            <p><strong>Antonio Estarlich</strong></p>
-            <p>Junior Full-Stack Web Developer</p>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <img src="images/me.jpg" />
+    <p>Junior Full Stack Developer passionate about building useful digital products and clean systems.</p>
+  </div>
+</section>
 
-            <p>Developer with 4 years of training in software and web development, focused on building full-stack
-                applications with Python, Flask, Django and modern JavaScript.</p>
+<section id="services">
+  <h2>Services</h2>
+  <div class="services">
+    <div class="service"><h3>Web Development</h3></div>
+    <div class="service"><h3>Backend Systems</h3></div>
+    <div class="service"><h3>UI/UX Design</h3></div>
+  </div>
+</section>
 
-            <p>Experienced in developing REST APIs, working with relational databases, and creating responsive front-end
-                interfaces.</p>
+<section id="projects">
+  <h2>Selected Work</h2>
+  <div class="grid" id="grid"></div>
+</section>
 
-            <p>Currently looking for my first professional role where I can contribute, continue learning, and grow as a
-                software developer.</p>
-
-        </div>
-    </div>
-</div>
-
-
-</div>
-</div>
-<!-- End About Me -->
-
-<div class="video_slider" id="slider"></div>
-
-<script src="JS/main-2.js"></script>
+<footer>
+  <p>Designed & built by <span>Antonio Estarlich</span></p>
+</footer>
 
 <!--Cookies-->
 <script>
@@ -134,6 +403,169 @@
         localStorage.setItem('cookiesAccepted', 'true');
         document.getElementById('cookieConsent').style.display = 'none';
     });
+</script>
+
+<script>
+
+// typing animation
+const words = ["digital products","clean code","scalable systems","modern apps"];
+let w = 0, c = 0, del = false;
+
+function typeLoop(){
+  let current = words[w];
+
+  if(!del){
+    c++;
+    if(c === current.length + 1){ del = true; setTimeout(typeLoop, 800); return; }
+  } else {
+    c--;
+    if(c === 0){ del = false; w = (w+1)%words.length; }
+  }
+
+  $('#typing').text(current.substring(0,c));
+  setTimeout(typeLoop, del ? 60 : 120);
+}
+
+typeLoop();
+
+// slider
+let slides = $('.slide');
+let i = 0;
+setInterval(()=>{
+  slides.removeClass('active');
+  $(slides[i]).addClass('active');
+  i = (i + 1) % slides.length;
+},3500);
+
+// scroll
+$(window).on('scroll', function(){
+  $('section').each(function(){
+    let top = $(this).offset().top - $(window).scrollTop();
+    if(top < window.innerHeight - 100) $(this).addClass('visible');
+  });
+});
+$(window).trigger('scroll');
+
+// projects
+const projects = [
+  {
+    title: "Nihongo Quest",
+    description:
+      "Full-stack educational web application designed to make learning Japanese interactive and engaging. The platform combines gamified quests, quizzes, and progress tracking to reinforce vocabulary and grammar concepts. Built with Flask and PostgreSQL, it features user authentication, dynamic content rendering, and a structured database system. This project focuses on user experience, backend logic, and scalable architecture.",
+    technologies: [
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "Python", icon: "devicon-python-plain" },
+      { name: "Flask", icon: "devicon-flask-original" },
+      { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
+      { name: "SQL", icon: "devicon-azuresqldatabase-plain" }
+    ],
+    video: "videos/nihongo_quest.mp4",
+    live: "https://nihongo-quest-app-54ed3ed7b8f5.herokuapp.com/",
+    repo: "https://github.com/ToniEstarlich/nihongo-quest"
+  },
+
+  {
+    title: "Pixel Store",
+    description:
+       "A full-featured e-commerce web application built with Django, simulating a modern online clothing store. It includes product browsing, filtering, shopping cart functionality, and a mock checkout system powered by Stripe integration. The project demonstrates backend-driven templates, database relationships, and secure payment workflow simulation, with a strong focus on clean UI and usability.",
+    technologies: ["JavaScript", "HTML", "CSS", "Python", "Django", "PostgreSQL"],
+    technologies: [
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "Python", icon: "devicon-python-plain" },
+      { name: "Django", icon: "devicon-django-plain" },
+      { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
+      { name: "SQL", icon: "devicon-azuresqldatabase-plain" },
+      { name: "Stripe", icon: "https://cdn.simpleicons.org/stripe" }
+    ],
+    video: "videos/pixel.mp4",
+    live: "https://pixel-store-6fb82487a320.herokuapp.com/",
+    repo: "https://github.com/ToniEstarlich/pixel-store"
+  },
+
+  {
+    title: "Global News",
+    description: "Responsive multi-category news platform designed with a modern layout and clean typography. The website features structured sections such as World, Technology, and Business, ensuring intuitive navigation and content hierarchy. Built with vanilla JavaScript and deployed via GitHub Pages, the project emphasizes responsive design, layout systems, and front-end best practices.",
+    technologies: [
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "GitHub", icon: "devicon-github-original" }
+    ],
+    video: "videos/global_news.mp4",
+    live: "https://toniestarlich.github.io/the-global-news.github.io-/",
+    repo: "https://github.com/ToniEstarlich/The-Global-News"
+  },
+
+  {
+    title: "Smile Clinic",
+    description:  "Professional landing page for a dental clinic, designed to present services, contact information, and brand identity in a clean and trustworthy way. The project focuses on UI clarity, call-to-action placement, and responsive layout for all devices. Developed with HTML, CSS, and JavaScript, it highlights front-end structure and design consistency.",
+    technologies: [
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "GitHub", icon: "devicon-github-original" }
+    ],
+    video: "videos/smile_clinic.mp4",
+    live: "https://toniestarlich.github.io/Smile-Clinic.github.io/",
+    repo: "https://github.com/ToniEstarlich/Smile_Clinic"
+  },
+
+  {
+    title: "Flavon Haven Burger",
+    description: "Modern restaurant website featuring an interactive menu, product gallery, and engaging visual presentation. The project focuses on branding, layout composition, and responsive design to simulate a real-world business website. Built using HTML, CSS, and JavaScript, it showcases front-end development skills and attention to visual detail.",
+    technologies: [
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "GitHub", icon: "devicon-github-original" }
+    ],
+    video: "videos/burguer.mp4",
+    live: "https://toniestarlich.github.io/Flavon_Haven_Burguer/index.html",
+    repo: "https://github.com/ToniEstarlich/Flavon_Haven_Burguer"
+  },
+
+  {
+    title: "Planet Book",
+    description: "Educational project repository and book resource platform developed with React. The application is structured to organize learning materials, coding exercises, and technical documentation in a scalable way. This project demonstrates component-based architecture, reusable UI elements, and structured project organization within a modern front-end framework.",
+    technologies: [
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "React", icon: "devicon-react-original" },
+      { name: "GitHub", icon: "devicon-github-original" }
+    ],
+    video: "videos/planet_book.mp4",
+    repo: "https://github.com/ToniEstarlich/Book-Planet"
+  }
+];
+
+projects.forEach(p=>{
+  $('#grid').append(`
+    <div class="card">
+      <h3>${p.title}</h3>
+      <video src="${p.video}" autoplay muted loop></video>
+      <div class="desc">${p.description}</div>
+      
+      <div class="tech">
+        ${(p.technologies || p.tech || []).map(t => typeof t === 'string' ? `<i class="${t}"></i>` : `<i class="${t.icon}" title="${t.name}"></i>`).join('')}
+      </div>
+
+      <div class="links" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        ${p.live ? `<a href="${p.live}" target="_blank" style="padding:8px 12px; border-radius:20px; background:#ffd400; color:#000; font-weight:700; text-decoration:none; font-size:13px;">Live</a>` : ''}
+        ${p.repo ? `<a href="${p.repo}" target="_blank" style="padding:8px 12px; border-radius:20px; background:#4cc9f0; color:#000; font-weight:700; text-decoration:none; font-size:13px;">Repo</a>` : ''}
+      </div>
+    </div>
+  `);
+});
+
+$('#scrollBtn').click(()=>{
+  $('html, body').animate({scrollTop:$('#projects').offset().top},900);
+});
+
 </script>
 
 </body>
