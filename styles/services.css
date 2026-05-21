@@ -1,0 +1,133 @@
+#services {
+  padding: 100px 60px;
+}
+
+.services-intro {
+  max-width: 750px;
+  color: var(--muted);
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* GRID */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* CARD */
+.service {
+  position: relative;
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ffffff, #e9e9ee);
+  border: 1px solid rgb(226, 255, 82);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* glow background */
+.service::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at top left,
+    rgba(76, 202, 240, 0.274),
+    transparent 60%);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* hover UX */
+.service:hover {
+  transform: translateY(-10px);
+  border-color: var(--sky);
+  box-shadow: 0 20px 60px rgb(76, 202, 240);
+}
+
+.service:hover::before {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* HEADER */
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* TITLE */
+.service h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--yellow);
+}
+
+/* TEXT */
+.service p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ICONS */
+.tech-icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tech-icons i,
+.tech-icons img {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.service:hover .tech-icons i,
+.service:hover .tech-icons img {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* Icons colors */
+
+.tech-icons i {
+  font-size: 18px;
+  transition: 0.3s ease;
+  opacity: 0.85;
+}
+
+/* hover micro UX */
+.tech-icons i:hover {
+  transform: translateY(-2px) scale(1.05);
+  opacity: 1;
+}
+
+/* PYTHON - azul cielo */
+.tech-icons .python {
+  color: #4cc9f0;
+}
+
+/* FLASK - naranja fuerte */
+.tech-icons .flask {
+  color: #ff7a18;
+}
+
+/* DJANGO - verde */
+.tech-icons .django {
+  color: #2ecc71;
+}
+
+/* POSTGRESQL - azul institucional */
+.tech-icons .postgresql {
+  color: #336791;
+}
