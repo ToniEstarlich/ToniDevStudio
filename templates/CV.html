@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antonio Estarlich - Software Developer</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at top, #4f46e5, #0f172a);
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    opacity: 0;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #4f46e5;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* SECTION */
+section {
+    padding: 80px 10%;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/* SKILLS */
+.skill {
+    margin: 10px 0;
+}
+
+.bar {
+    height: 10px;
+    background: #1e293b;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 10px;
+    width: 0;
+    background: #4f46e5;
+    transition: 2s;
+}
+
+/* TIMELINE */
+.timeline {
+    border-left: 2px solid #4f46e5;
+    padding-left: 20px;
+}
+
+.timeline div {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: 0.6s;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    background: #111827;
+    padding: 60px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1 id="name">Antonio Estarlich</h1>
+    <h2 id="typing"></h2>
+    <button class="btn" onclick="scrollToSection()">Explore My Work</button>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="title">About Me</h2>
+    <p>
+        Junior Full-Stack Developer with experience in Python, C#, JavaScript, Django, Flask, React and PostgreSQL.
+        Passionate about backend systems, clean architecture, and building immersive digital experiences.
+    </p>
+</section>
+
+<!-- WHAT I DO -->
+<section>
+    <h2 class="title">What I Do</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Full Stack Dev</h3>
+            <p>Web apps with Django, Flask, React, APIs and databases.</p>
+        </div>
+        <div class="card">
+            <h3>Backend Systems</h3>
+            <p>REST APIs, authentication, scalable architecture.</p>
+        </div>
+        <div class="card">
+            <h3>VR + AI Vision</h3>
+            <p>Future focus: immersive AI-powered virtual worlds.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2 class="title">Skills</h2>
+
+    <div class="skill">Python <div class="bar"><div class="bar-fill" data="90%"></div></div></div>
+    <div class="skill">JavaScript <div class="bar"><div class="bar-fill" data="85%"></div></div></div>
+    <div class="skill">Django <div class="bar"><div class="bar-fill" data="80%"></div></div></div>
+    <div class="skill">React <div class="bar"><div class="bar-fill" data="75%"></div></div></div>
+    <div class="skill">SQL <div class="bar"><div class="bar-fill" data="85%"></div></div></div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <h2 class="title">Projects</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Nihongo Quest</h3>
+            <p>Flask + PostgreSQL learning platform</p>
+        </div>
+        <div class="card">
+            <h3>Pixel Store</h3>
+            <p>Django + React ecommerce system</p>
+        </div>
+        <div class="card">
+            <h3>Global News</h3>
+            <p>JavaScript interactive news platform</p>
+        </div>
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section>
+    <h2 class="title">Journey</h2>
+
+    <div class="timeline">
+        <div>2020 → Started software journey</div>
+        <div>2022 → Python & Web development</div>
+        <div>2023 → Full Stack projects</div>
+        <div>2024 → Advanced backend systems</div>
+        <div>Today → AI + VR development focus</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact">
+    <h2>Let's Build the Future</h2>
+    <p>Email: toni.estarlich@me.com</p>
+    <p>Phone: 07842726874</p>
+</div>
+
+<script>
+
+// smooth scroll
+function scrollToSection(){
+    document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+
+// typing effect
+let text = "Software Developer | AI | VR | Full Stack Engineer";
+let i = 0;
+
+function type(){
+    if(i < text.length){
+        $("#typing").append(text.charAt(i));
+        i++;
+        setTimeout(type, 60);
+    }
+}
+
+// animations on scroll
+$(window).on("scroll", function(){
+
+    $(".card").each(function(){
+        if($(window).scrollTop() + 700 > $(this).offset().top){
+            $(this).css({
+                opacity:1,
+                transform:"translateY(0)"
+            });
+        }
+    });
+
+    $(".title").each(function(){
+        if($(window).scrollTop() + 700 > $(this).offset().top){
+            $(this).css({opacity:1});
+        }
+    });
+
+    $(".timeline div").each(function(){
+        if($(window).scrollTop() + 700 > $(this).offset().top){
+            $(this).css({
+                opacity:1,
+                transform:"translateX(0)"
+            });
+        }
+    });
+
+    $(".bar-fill").each(function(){
+        if($(window).scrollTop() + 700 > $(this).offset().top){
+            $(this).css("width", $(this).attr("data"));
+        }
+    });
+
+});
+
+// hero animation
+$(document).ready(function(){
+    $("#name").animate({opacity:1, top:0}, 1000);
+    $("#name").css({opacity:1, transform:"translateY(0)"});
+    type();
+});
+
+</script>
+
+</body>
+</html>
