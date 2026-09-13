@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Important for YouTube Error 153 -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AE LIVE — Technology News</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="styles/DevLIVE.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     BREAKING BAR
+========================================================= -->
+
+<div class="breaking-bar">
+
+    <div class="breaking-left">
+        <span class="pulse-dot"></span>
+        <strong>BREAKING</strong>
+    </div>
+
+    <div id="breakingHeadline">
+        Loading latest technology news...
+    </div>
+
+    <div id="liveClock">
+        --:--
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="brand">
+        <span class="brand-dev">AE</span>
+        <span class="brand-live">LIVE</span>
+    </div>
+
+    <nav class="main-nav">
+
+        <a href="../../index.html">
+            <i class="bi bi-cpu"></i>
+            AE portfolio
+        </a>
+
+        <a href="#live">
+            <i class="bi bi-broadcast-pin"></i>
+            Live
+        </a>
+
+        <a href="#now">
+            <i class="bi bi-lightning-charge"></i>
+            Now
+        </a>
+
+        <a href="#stories">
+            <i class="bi bi-newspaper"></i>
+            Stories
+        </a>
+
+        <a href="#about">
+            <i class="bi bi-info-circle"></i>
+            About
+        </a>
+
+    </nav>
+
+    <div class="on-air">
+
+        <span class="on-air-dot"></span>
+
+        ON AIR
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="main-container">
+
+    <!-- =====================================================
+         LIVE SECTION
+    ====================================================== -->
+
+    <section class="live-layout" id="live">
+
+
+        <!-- =================================================
+             LEFT COLUMN
+        ================================================== -->
+
+        <div class="live-left">
+
+            <!-- TV -->
+
+            <div class="tv-card">
+
+                <div class="tv-topbar">
+
+                    <div>
+                        <span class="live-label">
+                            <span class="pulse-dot"></span>
+                            LIVE
+                        </span>
+
+                        <span class="tv-title">
+                            DEV LIVE NEWSROOM
+                        </span>
+                    </div>
+
+                    <div class="tv-time" id="tvTime">
+                        LIVE
+                    </div>
+
+                </div>
+
+
+                <div class="youtube-wrapper">
+
+                    <div
+                        id="youtubePlayer"
+                        class="youtube-player"
+                    ></div>
+
+                    <div
+                        id="youtubeFallback"
+                        class="youtube-fallback"
+                    >
+
+                        <i class="bi bi-youtube"></i>
+
+                        <strong>DEV LIVE</strong>
+
+                        <span>
+                            Add your YouTube video ID in
+                            JS/live-news.js
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="program-info">
+
+                    <div>
+
+                        <span class="program-kicker">
+                            CURRENT PROGRAM
+                        </span>
+
+                        <h2>
+                            Technology Live
+                        </h2>
+
+                        <p>
+                            Breaking technology,
+                            developers, AI, startups and
+                            digital culture.
+                        </p>
+
+                    </div>
+
+                    <div class="program-status">
+
+                        <span class="status-dot"></span>
+
+                        LIVE NOW
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 LIVE CHAT
+            ================================================== -->
+
+            <div class="chat-card">
+
+                <div class="chat-header">
+
+                    <div>
+
+                        <span class="chat-kicker">
+                            <span class="chat-live-dot"></span>
+                            LIVE CHAT
+                        </span>
+
+                        <h3>
+                            DEV LIVE COMMUNITY
+                        </h3>
+
+                    </div>
+
+                    <div
+                        class="viewer-count"
+                        id="viewerCount"
+                    >
+                        <i class="bi bi-people-fill"></i>
+                        128
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="chat-messages"
+                    id="liveChat"
+                >
+                    <!-- JS creates chat messages -->
+                </div>
+
+
+                <div class="chat-input-row">
+
+                    <input
+                        id="chatInput"
+                        type="text"
+                        maxlength="120"
+                        placeholder="Join the conversation..."
+                    >
+
+                    <button
+                        id="chatSend"
+                        type="button"
+                        aria-label="Send message"
+                    >
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             RIGHT COLUMN
+        ================================================== -->
+
+        <aside class="news-panel" id="now">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-kicker">
+                        LIVE FEED
+                    </span>
+
+                    <h2>
+                        What's happening now
+                    </h2>
+
+                </div>
+
+                <button
+                    id="refreshNews"
+                    class="refresh-button"
+                    title="Refresh news"
+                >
+                    <i class="bi bi-arrow-clockwise"></i>
+                </button>
+
+            </div>
+
+
+            <div
+                id="liveNews"
+                class="live-news"
+            >
+
+                <div class="news-loading">
+
+                    <div class="loading-spinner"></div>
+
+                    Loading live technology news...
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- =====================================================
+         STORIES
+    ====================================================== -->
+
+    <section
+        class="stories-section"
+        id="stories"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="panel-kicker">
+                    LATEST
+                </span>
+
+                <h2>
+                    Technology Stories
+                </h2>
+
+            </div>
+
+            <span
+                id="storyCount"
+                class="story-count"
+            >
+                LIVE DATA
+            </span>
+
+        </div>
+
+
+        <div
+            id="storyGrid"
+            class="story-grid"
+        ></div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SIGNAL
+    ====================================================== -->
+
+    <section class="signal-section">
+
+        <div class="signal-card">
+
+            <div class="signal-icon">
+                <i class="bi bi-activity"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    DATA SYSTEM
+                </span>
+
+                <strong>
+                    LIVE NEWS CONNECTION
+                </strong>
+
+            </div>
+
+            <div
+                class="signal-status"
+                id="apiStatus"
+            >
+                CONNECTING
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+        class="about-section"
+        id="about"
+    >
+
+        <span class="panel-kicker">
+            ABOUT DEV LIVE
+        </span>
+
+        <h2>
+            Technology never stops.
+        </h2>
+
+        <p>
+            DEV LIVE is a technology newsroom concept
+            focused on developers, AI, software, startups,
+            cybersecurity and the future of digital culture.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FIXED TICKER
+========================================================= -->
+
+<section class="ticker-section">
+
+    <div class="ticker-label">
+
+        <span class="pulse-dot"></span>
+
+        DEV LIVE
+
+    </div>
+
+
+    <div class="ticker-window">
+
+        <div
+            class="ticker-track"
+            id="tickerTrack"
+        >
+            Loading technology news...
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <span>
+        © 2026 DEV LIVE
+    </span>
+
+    <div>
+
+        <a
+            href="https://toniestarlich.github.io/ToniDevStudio/"
+            target="_blank"
+            rel="noopener"
+        >
+            ToniDevStudio
+        </a>
+
+        <a
+            href="https://github.com/ToniEstarlich"
+            target="_blank"
+            rel="noopener"
+        >
+            GitHub
+        </a>
+
+        <a
+            href="https://www.linkedin.com/in/antonio-estarlich-81125220a/"
+            target="_blank"
+            rel="noopener"
+        >
+            LinkedIn
+        </a>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     COOKIE
+========================================================= -->
+
+<div
+    id="cookieBanner"
+    class="cookie-banner"
+>
+
+    <div>
+
+        <strong>
+            DEV LIVE uses cookies
+        </strong>
+
+        <span>
+            Used to improve the experience and understand
+            site usage.
+        </span>
+
+    </div>
+
+    <button id="acceptCookies">
+        Accept
+    </button>
+
+</div>
+
+
+<script src="js/live-news.js"></script>
+
+</body>
+</html>
